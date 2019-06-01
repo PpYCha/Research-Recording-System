@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.645
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResearchRecordingSystem", "Test\ResearchRecordingSystem.csproj", "{65AFD716-FCA5-48FE-9EAD-B91CF657565B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{65AFD716-FCA5-48FE-9EAD-B91CF657565B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65AFD716-FCA5-48FE-9EAD-B91CF657565B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65AFD716-FCA5-48FE-9EAD-B91CF657565B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65AFD716-FCA5-48FE-9EAD-B91CF657565B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B0347A8A-1D0C-4DD2-88FB-FC933A599A98}
+	EndGlobalSection
+EndGlobal
