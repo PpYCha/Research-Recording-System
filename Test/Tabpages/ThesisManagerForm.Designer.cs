@@ -54,6 +54,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.tb_NumberOfCopies = new System.Windows.Forms.TextBox();
             this.thesisTitleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.courseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Thesis)).BeginInit();
@@ -68,7 +70,7 @@
             this.tb_Remarks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tb_Remarks.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_Remarks.ForeColor = System.Drawing.Color.DimGray;
-            this.tb_Remarks.Location = new System.Drawing.Point(148, 120);
+            this.tb_Remarks.Location = new System.Drawing.Point(169, 121);
             this.tb_Remarks.Multiline = true;
             this.tb_Remarks.Name = "tb_Remarks";
             this.tb_Remarks.Size = new System.Drawing.Size(221, 20);
@@ -78,7 +80,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(63, 120);
+            this.label6.Location = new System.Drawing.Point(84, 121);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(79, 19);
             this.label6.TabIndex = 52;
@@ -88,7 +90,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(14, 82);
+            this.label5.Location = new System.Drawing.Point(35, 83);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(128, 19);
             this.label5.TabIndex = 50;
@@ -99,7 +101,7 @@
             this.tb_Title.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tb_Title.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_Title.ForeColor = System.Drawing.Color.DimGray;
-            this.tb_Title.Location = new System.Drawing.Point(148, 43);
+            this.tb_Title.Location = new System.Drawing.Point(169, 44);
             this.tb_Title.Multiline = true;
             this.tb_Title.Name = "tb_Title";
             this.tb_Title.Size = new System.Drawing.Size(221, 20);
@@ -109,7 +111,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(100, 43);
+            this.label1.Location = new System.Drawing.Point(121, 44);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 19);
             this.label1.TabIndex = 48;
@@ -119,7 +121,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(76, 164);
+            this.label2.Location = new System.Drawing.Point(97, 165);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 19);
             this.label2.TabIndex = 54;
@@ -130,7 +132,7 @@
             this.cb_Course.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cb_Course.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_Course.FormattingEnabled = true;
-            this.cb_Course.Location = new System.Drawing.Point(148, 156);
+            this.cb_Course.Location = new System.Drawing.Point(169, 157);
             this.cb_Course.Name = "cb_Course";
             this.cb_Course.Size = new System.Drawing.Size(221, 29);
             this.cb_Course.TabIndex = 55;
@@ -145,7 +147,7 @@
             this.dataGridView_Thesis.Location = new System.Drawing.Point(447, 12);
             this.dataGridView_Thesis.Name = "dataGridView_Thesis";
             this.dataGridView_Thesis.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_Thesis.Size = new System.Drawing.Size(705, 501);
+            this.dataGridView_Thesis.Size = new System.Drawing.Size(705, 566);
             this.dataGridView_Thesis.TabIndex = 56;
             this.dataGridView_Thesis.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView_Thesis_DataError);
             // 
@@ -156,7 +158,7 @@
             this.bt_SaveCourse.ForeColor = System.Drawing.Color.White;
             this.bt_SaveCourse.Image = ((System.Drawing.Image)(resources.GetObject("bt_SaveCourse.Image")));
             this.bt_SaveCourse.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_SaveCourse.Location = new System.Drawing.Point(216, 457);
+            this.bt_SaveCourse.Location = new System.Drawing.Point(218, 519);
             this.bt_SaveCourse.Name = "bt_SaveCourse";
             this.bt_SaveCourse.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.bt_SaveCourse.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -174,7 +176,7 @@
             this.bt_Ecopy1.ForeColor = System.Drawing.Color.White;
             this.bt_Ecopy1.Image = ((System.Drawing.Image)(resources.GetObject("bt_Ecopy1.Image")));
             this.bt_Ecopy1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_Ecopy1.Location = new System.Drawing.Point(12, 390);
+            this.bt_Ecopy1.Location = new System.Drawing.Point(14, 452);
             this.bt_Ecopy1.Name = "bt_Ecopy1";
             this.bt_Ecopy1.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.bt_Ecopy1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -192,7 +194,7 @@
             this.bt_Ecopy2.ForeColor = System.Drawing.Color.White;
             this.bt_Ecopy2.Image = ((System.Drawing.Image)(resources.GetObject("bt_Ecopy2.Image")));
             this.bt_Ecopy2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_Ecopy2.Location = new System.Drawing.Point(216, 390);
+            this.bt_Ecopy2.Location = new System.Drawing.Point(218, 452);
             this.bt_Ecopy2.Name = "bt_Ecopy2";
             this.bt_Ecopy2.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.bt_Ecopy2.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -208,7 +210,7 @@
             this.cb_PublishedYear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cb_PublishedYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_PublishedYear.FormattingEnabled = true;
-            this.cb_PublishedYear.Location = new System.Drawing.Point(148, 78);
+            this.cb_PublishedYear.Location = new System.Drawing.Point(169, 79);
             this.cb_PublishedYear.Name = "cb_PublishedYear";
             this.cb_PublishedYear.Size = new System.Drawing.Size(221, 29);
             this.cb_PublishedYear.TabIndex = 60;
@@ -219,7 +221,7 @@
             this.tb_AuthorContactNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tb_AuthorContactNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_AuthorContactNumber.ForeColor = System.Drawing.Color.DimGray;
-            this.tb_AuthorContactNumber.Location = new System.Drawing.Point(143, 64);
+            this.tb_AuthorContactNumber.Location = new System.Drawing.Point(169, 63);
             this.tb_AuthorContactNumber.Multiline = true;
             this.tb_AuthorContactNumber.Name = "tb_AuthorContactNumber";
             this.tb_AuthorContactNumber.Size = new System.Drawing.Size(221, 20);
@@ -230,7 +232,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(49, 65);
+            this.label3.Location = new System.Drawing.Point(75, 64);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(88, 19);
             this.label3.TabIndex = 64;
@@ -242,7 +244,7 @@
             this.tb_AuthorFName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tb_AuthorFName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_AuthorFName.ForeColor = System.Drawing.Color.DimGray;
-            this.tb_AuthorFName.Location = new System.Drawing.Point(144, 32);
+            this.tb_AuthorFName.Location = new System.Drawing.Point(170, 31);
             this.tb_AuthorFName.Multiline = true;
             this.tb_AuthorFName.Name = "tb_AuthorFName";
             this.tb_AuthorFName.Size = new System.Drawing.Size(221, 20);
@@ -253,11 +255,11 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(16, 33);
+            this.label4.Location = new System.Drawing.Point(42, 32);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(121, 19);
+            this.label4.Size = new System.Drawing.Size(117, 19);
             this.label4.TabIndex = 62;
-            this.label4.Text = "Authorl Name:";
+            this.label4.Text = "Author Name:";
             // 
             // tb_AuthorMName
             // 
@@ -310,7 +312,7 @@
             this.cb_Gender.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.cb_Gender.Location = new System.Drawing.Point(143, 95);
+            this.cb_Gender.Location = new System.Drawing.Point(169, 94);
             this.cb_Gender.Name = "cb_Gender";
             this.cb_Gender.Size = new System.Drawing.Size(221, 29);
             this.cb_Gender.TabIndex = 71;
@@ -320,7 +322,7 @@
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(65, 99);
+            this.label9.Location = new System.Drawing.Point(91, 98);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(72, 19);
             this.label9.TabIndex = 70;
@@ -334,15 +336,17 @@
             this.groupBox1.Controls.Add(this.tb_AuthorContactNumber);
             this.groupBox1.Controls.Add(this.cb_Gender);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Location = new System.Drawing.Point(12, 217);
+            this.groupBox1.Location = new System.Drawing.Point(14, 279);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(400, 150);
+            this.groupBox1.Size = new System.Drawing.Size(427, 150);
             this.groupBox1.TabIndex = 72;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Author Details";
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.tb_NumberOfCopies);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.tb_Title);
             this.groupBox2.Controls.Add(this.cb_PublishedYear);
@@ -353,10 +357,31 @@
             this.groupBox2.Controls.Add(this.cb_Course);
             this.groupBox2.Location = new System.Drawing.Point(14, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(400, 199);
+            this.groupBox2.Size = new System.Drawing.Size(427, 236);
             this.groupBox2.TabIndex = 73;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Research Book Details";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(11, 205);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(152, 19);
+            this.label10.TabIndex = 61;
+            this.label10.Text = "Number of Copies:";
+            // 
+            // tb_NumberOfCopies
+            // 
+            this.tb_NumberOfCopies.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.tb_NumberOfCopies.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_NumberOfCopies.ForeColor = System.Drawing.Color.DimGray;
+            this.tb_NumberOfCopies.Location = new System.Drawing.Point(169, 205);
+            this.tb_NumberOfCopies.Multiline = true;
+            this.tb_NumberOfCopies.Name = "tb_NumberOfCopies";
+            this.tb_NumberOfCopies.Size = new System.Drawing.Size(221, 20);
+            this.tb_NumberOfCopies.TabIndex = 62;
             // 
             // thesisTitleBindingSource
             // 
@@ -371,7 +396,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.ClientSize = new System.Drawing.Size(1164, 525);
+            this.ClientSize = new System.Drawing.Size(1164, 590);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label8);
@@ -429,5 +454,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox tb_NumberOfCopies;
     }
 }

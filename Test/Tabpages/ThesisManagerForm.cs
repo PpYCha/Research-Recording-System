@@ -136,6 +136,7 @@ namespace Test
                                     Remarks = tb_Remarks.Text,
                                     PublishedYear = cb_PublishedYear.SelectedItem.ToString(),
                                     CourseNameRb = cb_Course.GetItemText(cb_Course.SelectedItem),
+                                    NumberOfCopies = tb_NumberOfCopies.Text,
                                 };
                                 ctx.ResearchBooks.Add(thesisTitle);
                                 ctx.SaveChanges();
@@ -262,7 +263,7 @@ namespace Test
 
         private void EnableAuthorControl()
         {
-          
+
             DialogResult result = MessageBox.Show("Add more author?", " ", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {

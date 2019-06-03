@@ -5,9 +5,9 @@ using System.Windows.Forms;
 
 namespace Test.Tabpages
 {
-    public partial class BurrowBook : Form
+    public partial class BorrowABook : Form
     {
-        public BurrowBook()
+        public BorrowABook()
         {
             InitializeComponent();
         }

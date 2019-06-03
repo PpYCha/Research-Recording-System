@@ -64,7 +64,7 @@ namespace ResearchRecordingSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            BurrowBook burrow = new BurrowBook();
+            BorrowABook burrow = new BorrowABook();
             burrow.Show();
         }
 

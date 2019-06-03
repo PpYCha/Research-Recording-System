@@ -100,6 +100,10 @@
     <Compile Include="Migrations\201906011513090_FixTable.Designer.cs">
       <DependentUpon>201906011513090_FixTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201906031038513_AddNumberOfCopies.cs" />
+    <Compile Include="Migrations\201906031038513_AddNumberOfCopies.Designer.cs">
+      <DependentUpon>201906031038513_AddNumberOfCopies.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Author.cs" />
     <Compile Include="Models\Borrow.cs" />
     <Compile Include="Models\ResearchBook.cs" />
@@ -115,11 +119,11 @@
     <Compile Include="Tabpages\AccountManagerForm.Designer.cs">
       <DependentUpon>AccountManagerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tabpages\BurrowBook.cs">
+    <Compile Include="TabTransactionBorrowingReturning\BorrowABook.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tabpages\BurrowBook.Designer.cs">
-      <DependentUpon>BurrowBook.cs</DependentUpon>
+    <Compile Include="TabTransactionBorrowingReturning\BorrowABook.Designer.cs">
+      <DependentUpon>BorrowABook.cs</DependentUpon>
     </Compile>
     <Compile Include="Tabpages\CourseManagerForm.cs">
       <SubType>Form</SubType>
@@ -140,6 +144,24 @@
     <Compile Include="Models\RRSContext.cs" />
     <Compile Include="Models\RRSDbInitializer.cs" />
     <Compile Include="Models\UserAccount.cs" />
+    <Compile Include="TabTransactionBorrowingReturning\ListofBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TabTransactionBorrowingReturning\ListofBooks.Designer.cs">
+      <DependentUpon>ListofBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabTransactionBorrowingReturning\ListofBorrowedBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TabTransactionBorrowingReturning\ListofBorrowedBooks.Designer.cs">
+      <DependentUpon>ListofBorrowedBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabTransactionBorrowingReturning\ReturnABorrowedBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TabTransactionBorrowingReturning\ReturnABorrowedBook.Designer.cs">
+      <DependentUpon>ReturnABorrowedBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tabpages\SearchThesis.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,11 +218,14 @@
     <EmbeddedResource Include="Migrations\201906011513090_FixTable.resx">
       <DependentUpon>201906011513090_FixTable.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906031038513_AddNumberOfCopies.resx">
+      <DependentUpon>201906031038513_AddNumberOfCopies.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tabpages\AccountManagerForm.resx">
       <DependentUpon>AccountManagerForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tabpages\BurrowBook.resx">
-      <DependentUpon>BurrowBook.cs</DependentUpon>
+    <EmbeddedResource Include="TabTransactionBorrowingReturning\BorrowABook.resx">
+      <DependentUpon>BorrowABook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tabpages\CourseManagerForm.resx">
       <DependentUpon>CourseManagerForm.cs</DependentUpon>
@@ -217,6 +242,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TabTransactionBorrowingReturning\ListofBooks.resx">
+      <DependentUpon>ListofBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabTransactionBorrowingReturning\ListofBorrowedBooks.resx">
+      <DependentUpon>ListofBorrowedBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabTransactionBorrowingReturning\ReturnABorrowedBook.resx">
+      <DependentUpon>ReturnABorrowedBook.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tabpages\SearchThesis.resx">
       <DependentUpon>SearchThesis.cs</DependentUpon>
       <SubType>Designer</SubType>
