@@ -14,6 +14,7 @@ namespace Test.Properties
         }
 
         public bool LoginAsGuest = false;
+        public bool LoginAsClerk = false;
 
         private void bt_Login_Click(object sender, EventArgs e)
         {
@@ -31,16 +32,29 @@ namespace Test.Properties
                     {
                         MessageBox.Show("Invalid Password.");
                     }
-                    else
+                    else if (user.IsActive == false)
                     {
+                        MessageBox.Show("Your Account is suspended. Please contact the administraor");
+
+
+                    }
+                    else if (user.UserRole == "Clerk")
+                    {
+                        LoginAsClerk = true;
                         this.Close();
                         this.Dispose();
-                       
+                    }
+
+                    else
+                    {
+
+                        this.Close();
+                        this.Dispose();
                     }
                 }
                 else
                 {
-                    MessageBox.Show("No (" + tb_Username.Text + ") user found"); 
+                    MessageBox.Show("No (" + tb_Username.Text + ") user found");
                 }
             }
         }
@@ -49,6 +63,11 @@ namespace Test.Properties
         {
             LoginAsGuest = true;
             DialogResult = DialogResult.OK;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

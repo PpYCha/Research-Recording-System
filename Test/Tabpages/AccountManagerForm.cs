@@ -38,7 +38,7 @@ namespace Test
                     }
 
                     ctx.SaveChanges();
-                    MessageBox.Show(this, "Save Successfull");
+                    MessageBox.Show(this, "Update Successfull");
                     LoadData();
                 }
             }
@@ -52,20 +52,33 @@ namespace Test
                     {
                         using (var ctx = new RRSContext())
                         {
-                            var user = new UserAccount()
+                            if (ctx.UserAccounts.Any(o => o.Username == tb_UserName.Text))
                             {
-                                FirstName = tb_FirstName.Text,
-                                MiddleName = tb_MiddleName.Text,
-                                LastName = tb_LastName.Text,
-                                Username = tb_UserName.Text,
-                                UserPassword = tb_UserPassword.Text,
-                                UserRole = cb_Role.SelectedItem.ToString(),
-                                IsActive = true,
+                                MessageBox.Show("Use different username");
+                            }
 
-                            };
-                            ctx.UserAccounts.Add(user);
-                            ctx.SaveChanges();
-                            LoadData();
+                            else
+                            {
+                                var user = new UserAccount()
+                                {
+
+
+                                    FirstName = tb_FirstName.Text,
+                                    MiddleName = tb_MiddleName.Text,
+                                    LastName = tb_LastName.Text,
+                                    Username = tb_UserName.Text,
+                                    UserPassword = tb_UserPassword.Text,
+                                    UserRole = cb_Role.SelectedItem.ToString(),
+                                    IsActive = true,
+
+                                };
+
+                                ctx.UserAccounts.Add(user);
+                                ctx.SaveChanges();
+                                LoadData();
+                                MessageBox.Show(this, "Save Successfull");
+                            }
+
                         }
                     }
                     catch (Exception)
@@ -172,6 +185,19 @@ namespace Test
             }
         }
 
+        private void dataGridView_User_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            if (dataGridView_User.CurrentRow.Tag != null)
+                e.Control.Text = dataGridView_User.CurrentRow.Tag.ToString();
+        }
 
+        private void dataGridView_User_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dataGridView_User.Columns[e.ColumnIndex].Name == "userPasswordDataGridViewTextBoxColumn" && e.Value != null)
+            {
+                dataGridView_User.Rows[e.RowIndex].Tag = e.Value;
+                e.Value = new String('*', e.Value.ToString().Length);
+            }
+        }
     }
 }

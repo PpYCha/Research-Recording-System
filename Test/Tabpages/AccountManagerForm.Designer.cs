@@ -45,7 +45,6 @@
             this.dataGridView_User = new System.Windows.Forms.DataGridView();
             this.bt_SaveUser = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.bt_DeleteUser = new System.Windows.Forms.Button();
             this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.middleNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,7 +63,8 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(95, 199);
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(95, 193);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(46, 19);
             this.label7.TabIndex = 49;
@@ -74,13 +74,15 @@
             // 
             this.cb_Role.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cb_Role.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cb_Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_Role.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_Role.FormattingEnabled = true;
             this.cb_Role.Items.AddRange(new object[] {
             "Admin",
             "Clerk"});
-            this.cb_Role.Location = new System.Drawing.Point(147, 201);
+            this.cb_Role.Location = new System.Drawing.Point(147, 192);
             this.cb_Role.Name = "cb_Role";
-            this.cb_Role.Size = new System.Drawing.Size(221, 28);
+            this.cb_Role.Size = new System.Drawing.Size(221, 27);
             this.cb_Role.TabIndex = 48;
             // 
             // tb_UserPassword
@@ -88,8 +90,9 @@
             this.tb_UserPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tb_UserPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tb_UserPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_UserPassword.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_UserPassword.ForeColor = System.Drawing.Color.DimGray;
-            this.tb_UserPassword.Location = new System.Drawing.Point(147, 165);
+            this.tb_UserPassword.Location = new System.Drawing.Point(147, 158);
             this.tb_UserPassword.Multiline = true;
             this.tb_UserPassword.Name = "tb_UserPassword";
             this.tb_UserPassword.PasswordChar = '*';
@@ -101,7 +104,8 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(57, 165);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(57, 159);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(84, 19);
             this.label6.TabIndex = 46;
@@ -112,8 +116,9 @@
             this.tb_UserName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tb_UserName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tb_UserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_UserName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_UserName.ForeColor = System.Drawing.Color.DimGray;
-            this.tb_UserName.Location = new System.Drawing.Point(147, 134);
+            this.tb_UserName.Location = new System.Drawing.Point(147, 124);
             this.tb_UserName.Multiline = true;
             this.tb_UserName.Name = "tb_UserName";
             this.tb_UserName.Size = new System.Drawing.Size(221, 20);
@@ -124,7 +129,8 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(44, 133);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(44, 127);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(97, 19);
             this.label4.TabIndex = 44;
@@ -135,8 +141,9 @@
             this.tb_MiddleName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tb_MiddleName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tb_MiddleName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_MiddleName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_MiddleName.ForeColor = System.Drawing.Color.DimGray;
-            this.tb_MiddleName.Location = new System.Drawing.Point(147, 61);
+            this.tb_MiddleName.Location = new System.Drawing.Point(147, 56);
             this.tb_MiddleName.Multiline = true;
             this.tb_MiddleName.Name = "tb_MiddleName";
             this.tb_MiddleName.Size = new System.Drawing.Size(221, 20);
@@ -147,6 +154,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(21, 61);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(120, 19);
@@ -158,8 +166,9 @@
             this.tb_LastName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tb_LastName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tb_LastName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_LastName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_LastName.ForeColor = System.Drawing.Color.DimGray;
-            this.tb_LastName.Location = new System.Drawing.Point(147, 93);
+            this.tb_LastName.Location = new System.Drawing.Point(147, 90);
             this.tb_LastName.Multiline = true;
             this.tb_LastName.Name = "tb_LastName";
             this.tb_LastName.Size = new System.Drawing.Size(221, 20);
@@ -170,6 +179,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(48, 93);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(94, 19);
@@ -181,6 +191,7 @@
             this.tb_FirstName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tb_FirstName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tb_FirstName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_FirstName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_FirstName.ForeColor = System.Drawing.Color.DimGray;
             this.tb_FirstName.Location = new System.Drawing.Point(147, 22);
             this.tb_FirstName.Multiline = true;
@@ -193,6 +204,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(48, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 19);
@@ -221,6 +233,8 @@
             this.dataGridView_User.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_User.Size = new System.Drawing.Size(631, 247);
             this.dataGridView_User.TabIndex = 35;
+            this.dataGridView_User.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView_User_CellFormatting);
+            this.dataGridView_User.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dataGridView_User_EditingControlShowing);
             // 
             // bt_SaveUser
             // 
@@ -262,24 +276,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "User Details";
             // 
-            // bt_DeleteUser
-            // 
-            this.bt_DeleteUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_DeleteUser.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_DeleteUser.ForeColor = System.Drawing.Color.White;
-            this.bt_DeleteUser.Image = ((System.Drawing.Image)(resources.GetObject("bt_DeleteUser.Image")));
-            this.bt_DeleteUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_DeleteUser.Location = new System.Drawing.Point(24, 294);
-            this.bt_DeleteUser.Name = "bt_DeleteUser";
-            this.bt_DeleteUser.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.bt_DeleteUser.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bt_DeleteUser.Size = new System.Drawing.Size(182, 47);
-            this.bt_DeleteUser.TabIndex = 52;
-            this.bt_DeleteUser.Text = "Delete";
-            this.bt_DeleteUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.bt_DeleteUser.UseVisualStyleBackColor = true;
-            this.bt_DeleteUser.Click += new System.EventHandler(this.bt_DeleteUser_Click);
-            // 
             // firstNameDataGridViewTextBoxColumn
             // 
             this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
@@ -307,7 +303,7 @@
             // userPasswordDataGridViewTextBoxColumn
             // 
             this.userPasswordDataGridViewTextBoxColumn.DataPropertyName = "UserPassword";
-            this.userPasswordDataGridViewTextBoxColumn.HeaderText = "UserPassword";
+            this.userPasswordDataGridViewTextBoxColumn.HeaderText = "Password";
             this.userPasswordDataGridViewTextBoxColumn.Name = "userPasswordDataGridViewTextBoxColumn";
             // 
             // userRoleDataGridViewTextBoxColumn
@@ -333,9 +329,9 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.ClientSize = new System.Drawing.Size(1098, 366);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.bt_DeleteUser);
             this.Controls.Add(this.bt_SaveUser);
             this.Controls.Add(this.dataGridView_User);
+            this.MinimumSize = new System.Drawing.Size(1114, 404);
             this.Name = "AccountManagerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AccountManagerForm";
@@ -364,6 +360,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView_User;
         private System.Windows.Forms.BindingSource userAccountBindingSource;
+        private System.Windows.Forms.Button bt_SaveUser;
+        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn middleNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
@@ -371,8 +369,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn userPasswordDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn userRoleDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn isActiveDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.Button bt_SaveUser;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button bt_DeleteUser;
     }
 }

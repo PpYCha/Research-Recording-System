@@ -16,14 +16,14 @@ namespace Test {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class CrystalReport : ReportClass {
+    public class Book_and_Author : ReportClass {
         
-        public CrystalReport() {
+        public Book_and_Author() {
         }
         
         public override string ResourceName {
             get {
-                return "CrystalReport.rpt";
+                return "Book and Author.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace Test {
         
         public override string FullResourceName {
             get {
-                return "Test.CrystalReport.rpt";
+                return "Test.Book and Author.rpt";
             }
             set {
                 // Do nothing
@@ -90,7 +90,7 @@ namespace Test {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_listAll {
+        public CrystalDecisions.Shared.IParameterField Parameter_book_auhtorsReal {
             get {
                 return this.DataDefinition.ParameterFields[0];
             }
@@ -98,9 +98,9 @@ namespace Test {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedCrystalReport : Component, ICachedReport {
+    public class CachedBook_and_Author : Component, ICachedReport {
         
-        public CachedCrystalReport() {
+        public CachedBook_and_Author() {
         }
         
         [Browsable(false)]
@@ -137,7 +137,7 @@ namespace Test {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            CrystalReport rpt = new CrystalReport();
+            Book_and_Author rpt = new Book_and_Author();
             rpt.Site = this.Site;
             return rpt;
         }

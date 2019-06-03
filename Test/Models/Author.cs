@@ -4,9 +4,9 @@
     {
 
         public int AuthorId { get; internal set; }
-        public string AuthorFName { get; set; }
-        public string AuthorLName { get; set; }
-        public string AuthorMName { get; set; }
+        public string AuthorName { get; set; }
+        //public string AuthorLName { get; set; }
+        //public string AuthorMName { get; set; }
         public string Gender { get; set; }
         public string AuthorContactNumber { get; set; }
 

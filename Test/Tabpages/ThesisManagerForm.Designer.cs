@@ -128,6 +128,7 @@
             // cb_Course
             // 
             this.cb_Course.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cb_Course.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_Course.FormattingEnabled = true;
             this.cb_Course.Location = new System.Drawing.Point(148, 156);
             this.cb_Course.Name = "cb_Course";
@@ -144,24 +145,22 @@
             this.dataGridView_Thesis.Location = new System.Drawing.Point(447, 12);
             this.dataGridView_Thesis.Name = "dataGridView_Thesis";
             this.dataGridView_Thesis.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_Thesis.Size = new System.Drawing.Size(705, 496);
+            this.dataGridView_Thesis.Size = new System.Drawing.Size(705, 501);
             this.dataGridView_Thesis.TabIndex = 56;
             this.dataGridView_Thesis.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView_Thesis_DataError);
-            this.dataGridView_Thesis.DoubleClick += new System.EventHandler(this.dataGridView_Thesis_DoubleClick);
             // 
             // bt_SaveCourse
             // 
-            this.bt_SaveCourse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.bt_SaveCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_SaveCourse.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_SaveCourse.ForeColor = System.Drawing.Color.White;
             this.bt_SaveCourse.Image = ((System.Drawing.Image)(resources.GetObject("bt_SaveCourse.Image")));
             this.bt_SaveCourse.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_SaveCourse.Location = new System.Drawing.Point(244, 527);
+            this.bt_SaveCourse.Location = new System.Drawing.Point(216, 457);
             this.bt_SaveCourse.Name = "bt_SaveCourse";
             this.bt_SaveCourse.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.bt_SaveCourse.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bt_SaveCourse.Size = new System.Drawing.Size(182, 58);
+            this.bt_SaveCourse.Size = new System.Drawing.Size(196, 58);
             this.bt_SaveCourse.TabIndex = 57;
             this.bt_SaveCourse.Text = "Save Thesis";
             this.bt_SaveCourse.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -170,13 +169,12 @@
             // 
             // bt_Ecopy1
             // 
-            this.bt_Ecopy1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.bt_Ecopy1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Ecopy1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Ecopy1.ForeColor = System.Drawing.Color.White;
             this.bt_Ecopy1.Image = ((System.Drawing.Image)(resources.GetObject("bt_Ecopy1.Image")));
             this.bt_Ecopy1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_Ecopy1.Location = new System.Drawing.Point(447, 527);
+            this.bt_Ecopy1.Location = new System.Drawing.Point(12, 390);
             this.bt_Ecopy1.Name = "bt_Ecopy1";
             this.bt_Ecopy1.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.bt_Ecopy1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -189,13 +187,12 @@
             // 
             // bt_Ecopy2
             // 
-            this.bt_Ecopy2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.bt_Ecopy2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Ecopy2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Ecopy2.ForeColor = System.Drawing.Color.White;
             this.bt_Ecopy2.Image = ((System.Drawing.Image)(resources.GetObject("bt_Ecopy2.Image")));
             this.bt_Ecopy2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_Ecopy2.Location = new System.Drawing.Point(699, 527);
+            this.bt_Ecopy2.Location = new System.Drawing.Point(216, 390);
             this.bt_Ecopy2.Name = "bt_Ecopy2";
             this.bt_Ecopy2.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.bt_Ecopy2.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -209,6 +206,7 @@
             // cb_PublishedYear
             // 
             this.cb_PublishedYear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cb_PublishedYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_PublishedYear.FormattingEnabled = true;
             this.cb_PublishedYear.Location = new System.Drawing.Point(148, 78);
             this.cb_PublishedYear.Name = "cb_PublishedYear";
@@ -221,7 +219,7 @@
             this.tb_AuthorContactNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tb_AuthorContactNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_AuthorContactNumber.ForeColor = System.Drawing.Color.DimGray;
-            this.tb_AuthorContactNumber.Location = new System.Drawing.Point(155, 130);
+            this.tb_AuthorContactNumber.Location = new System.Drawing.Point(143, 64);
             this.tb_AuthorContactNumber.Multiline = true;
             this.tb_AuthorContactNumber.Name = "tb_AuthorContactNumber";
             this.tb_AuthorContactNumber.Size = new System.Drawing.Size(221, 20);
@@ -232,7 +230,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(61, 131);
+            this.label3.Location = new System.Drawing.Point(49, 65);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(88, 19);
             this.label3.TabIndex = 64;
@@ -244,7 +242,7 @@
             this.tb_AuthorFName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tb_AuthorFName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_AuthorFName.ForeColor = System.Drawing.Color.DimGray;
-            this.tb_AuthorFName.Location = new System.Drawing.Point(155, 33);
+            this.tb_AuthorFName.Location = new System.Drawing.Point(144, 32);
             this.tb_AuthorFName.Multiline = true;
             this.tb_AuthorFName.Name = "tb_AuthorFName";
             this.tb_AuthorFName.Size = new System.Drawing.Size(221, 20);
@@ -255,19 +253,18 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(56, 35);
+            this.label4.Location = new System.Drawing.Point(16, 33);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 19);
+            this.label4.Size = new System.Drawing.Size(121, 19);
             this.label4.TabIndex = 62;
-            this.label4.Text = "First Name:";
+            this.label4.Text = "Authorl Name:";
             // 
             // tb_AuthorMName
             // 
-            this.tb_AuthorMName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tb_AuthorMName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tb_AuthorMName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_AuthorMName.ForeColor = System.Drawing.Color.DimGray;
-            this.tb_AuthorMName.Location = new System.Drawing.Point(155, 99);
+            this.tb_AuthorMName.Location = new System.Drawing.Point(166, 108);
             this.tb_AuthorMName.Multiline = true;
             this.tb_AuthorMName.Name = "tb_AuthorMName";
             this.tb_AuthorMName.Size = new System.Drawing.Size(221, 20);
@@ -275,11 +272,10 @@
             // 
             // tb_AuthorLName
             // 
-            this.tb_AuthorLName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tb_AuthorLName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tb_AuthorLName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_AuthorLName.ForeColor = System.Drawing.Color.DimGray;
-            this.tb_AuthorLName.Location = new System.Drawing.Point(155, 68);
+            this.tb_AuthorLName.Location = new System.Drawing.Point(166, 77);
             this.tb_AuthorLName.Multiline = true;
             this.tb_AuthorLName.Name = "tb_AuthorLName";
             this.tb_AuthorLName.Size = new System.Drawing.Size(221, 20);
@@ -287,10 +283,9 @@
             // 
             // label7
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(55, 66);
+            this.label7.Location = new System.Drawing.Point(66, 75);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(94, 19);
             this.label7.TabIndex = 68;
@@ -298,10 +293,9 @@
             // 
             // label8
             // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(29, 97);
+            this.label8.Location = new System.Drawing.Point(40, 106);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(120, 19);
             this.label8.TabIndex = 69;
@@ -311,11 +305,12 @@
             // 
             this.cb_Gender.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cb_Gender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cb_Gender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_Gender.FormattingEnabled = true;
             this.cb_Gender.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.cb_Gender.Location = new System.Drawing.Point(155, 161);
+            this.cb_Gender.Location = new System.Drawing.Point(143, 95);
             this.cb_Gender.Name = "cb_Gender";
             this.cb_Gender.Size = new System.Drawing.Size(221, 29);
             this.cb_Gender.TabIndex = 71;
@@ -325,7 +320,7 @@
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(77, 165);
+            this.label9.Location = new System.Drawing.Point(65, 99);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(72, 19);
             this.label9.TabIndex = 70;
@@ -334,18 +329,14 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.cb_Gender);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.tb_AuthorLName);
             this.groupBox1.Controls.Add(this.tb_AuthorFName);
-            this.groupBox1.Controls.Add(this.tb_AuthorMName);
-            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.tb_AuthorContactNumber);
-            this.groupBox1.Location = new System.Drawing.Point(26, 226);
+            this.groupBox1.Controls.Add(this.cb_Gender);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Location = new System.Drawing.Point(12, 217);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(400, 245);
+            this.groupBox1.Size = new System.Drawing.Size(400, 150);
             this.groupBox1.TabIndex = 72;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Author Details";
@@ -360,7 +351,7 @@
             this.groupBox2.Controls.Add(this.tb_Remarks);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.cb_Course);
-            this.groupBox2.Location = new System.Drawing.Point(26, 12);
+            this.groupBox2.Location = new System.Drawing.Point(14, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(400, 199);
             this.groupBox2.TabIndex = 73;
@@ -380,15 +371,20 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.ClientSize = new System.Drawing.Size(1164, 596);
+            this.ClientSize = new System.Drawing.Size(1164, 525);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.bt_Ecopy2);
             this.Controls.Add(this.bt_Ecopy1);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.tb_AuthorLName);
             this.Controls.Add(this.bt_SaveCourse);
+            this.Controls.Add(this.tb_AuthorMName);
             this.Controls.Add(this.dataGridView_Thesis);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5);
+            this.MinimumSize = new System.Drawing.Size(1180, 563);
             this.Name = "ThesisManagerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ThesisManagerForm";
@@ -401,6 +397,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.thesisTitleBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

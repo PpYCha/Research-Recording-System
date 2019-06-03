@@ -8,11 +8,15 @@ namespace Test
 {
     public partial class ThesisManagerForm : Form
     {
+        private int? tempId;
+
         public ThesisManagerForm()
         {
             InitializeComponent();
 
         }
+
+
 
         private void ThesisManagerForm_Load(object sender, EventArgs e)
         {
@@ -41,7 +45,7 @@ namespace Test
             {
                 var query = from p1 in ctx.ResearchBooks
                             join f1 in ctx.Authors on p1.ThesisTitleId equals f1.AuthorId
-                            select new { p1.Title, p1.PublishedYear, p1.CourseNameRb, f1.AuthorFName, f1.AuthorLName };
+                            select new { p1.Title, p1.PublishedYear, p1.CourseNameRb, p1.Remarks, f1.AuthorName/*, f1.AuthorLName*/ };
                 //Bind the gridview.
 
 
@@ -49,10 +53,11 @@ namespace Test
                 dataGridView_Thesis.Columns[0].HeaderCell.Value = "Title";
                 dataGridView_Thesis.Columns[1].HeaderCell.Value = "Published Year";
                 dataGridView_Thesis.Columns[2].HeaderCell.Value = "Course";
-                dataGridView_Thesis.Columns[3].HeaderCell.Value = "Author Name";
-                dataGridView_Thesis.Columns[4].HeaderCell.Value = "Author Last Name";
+                dataGridView_Thesis.Columns[3].HeaderCell.Value = "Remarks";
+                dataGridView_Thesis.Columns[4].HeaderCell.Value = "Author Name";
+                //dataGridView_Thesis.Columns[4].HeaderCell.Value = "Author Last Name";
 
-                DataGridViewTextBoxColumn col = new DataGridViewTextBoxColumn();
+
 
 
             }
@@ -78,7 +83,7 @@ namespace Test
             using (RRSContext ctx = new RRSContext())
             {
 
-                var course_List = ctx.Courses.ToList();
+                var course_List = ctx.Courses.Where(x => x.IsActive == true).ToList();
                 if (course_List.Count > 0)
                 {
                     cb_Course.DataSource = course_List;
@@ -102,62 +107,89 @@ namespace Test
 
         private void SaveCourse()
         {
-            if (!(tb_Title.Text == ""))
+            if (tb_Title.Enabled == false)
             {
-
-
-                try
-                {
-                    using (var ctx = new RRSContext())
-                    {
-
-                        //var course = new Course();
-                        //course.ThesisTitleId = (Int32)cb_Course.SelectedValue;
-                        var thesisTitle = new ResearchBook()
-                        {
-                            Title = tb_Title.Text,
-                            Remarks = tb_Remarks.Text,
-                            PublishedYear = cb_PublishedYear.SelectedItem.ToString(),
-                            CourseNameRb = cb_Course.GetItemText(cb_Course.SelectedItem),
-                        };
-                        ctx.ResearchBooks.Add(thesisTitle);
-                        ctx.SaveChanges();
-
-                        var author = new Author()
-
-                        {
-                            AuthorFName = tb_AuthorFName.Text,
-                            AuthorMName = tb_AuthorMName.Text,
-                            AuthorLName = tb_AuthorLName.Text,
-                            AuthorContactNumber = tb_AuthorContactNumber.Text,
-                            ThesisTitleId = thesisTitle.ThesisTitleId,
-                        };
-
-                        ctx.Authors.Add(author);
-                        ctx.SaveChanges();
-
-
-
-                        LoadThesis();
-                        MessageBox.Show("Save Successful");
-                        ClearTextField();
-                       
-
-
-                    }
-                }
-                catch (Exception)
-                {
-
-                    MessageBox.Show("Select Publish Year and Course");
-                }
+                AddAuthor();
             }
             else
             {
-                MessageBox.Show("Please filled up the required fields:");
+                if (!(tb_Title.Text == "" || cb_PublishedYear.SelectedIndex == -1 || cb_Course.SelectedIndex == -1 || tb_AuthorFName.Text == ""))
+                {
+
+
+
+                    try
+                    {
+                        using (var ctx = new RRSContext())
+                        {
+                            if (ctx.ResearchBooks.Any(o => o.Title == tb_Title.Text))
+                            {
+                                MessageBox.Show("Title Already Exist");
+                            }
+                            else
+                            {
+                                //var course = new Course();
+                                //course.ThesisTitleId = (Int32)cb_Course.SelectedValue;
+                                var thesisTitle = new ResearchBook()
+                                {
+                                    Title = tb_Title.Text,
+                                    Remarks = tb_Remarks.Text,
+                                    PublishedYear = cb_PublishedYear.SelectedItem.ToString(),
+                                    CourseNameRb = cb_Course.GetItemText(cb_Course.SelectedItem),
+                                };
+                                ctx.ResearchBooks.Add(thesisTitle);
+                                ctx.SaveChanges();
+
+                                var author = new Author();
+
+                                author.AuthorName = tb_AuthorFName.Text;
+                                //AuthorMName = tb_AuthorMName.Text,
+                                //AuthorLName = tb_AuthorLName.Text,
+                                author.AuthorContactNumber = tb_AuthorContactNumber.Text;
+                                author.Gender = cb_Gender.SelectedItem.ToString();
+                                author.ThesisTitleId = thesisTitle.ThesisTitleId;
+
+                                tempId = author.ThesisTitleId;
+                                ctx.Authors.Add(author);
+                                ctx.SaveChanges();
+
+
+
+                                LoadThesis();
+                                MessageBox.Show("Save Successful");
+                                ClearTextField();
+                                DialogResult result = MessageBox.Show("Add more author?", " ", MessageBoxButtons.YesNo);
+
+                                if (result == DialogResult.Yes)
+                                {
+                                    tb_Title.Enabled = false;
+                                    tb_Remarks.Enabled = false;
+                                    cb_Course.Enabled = false;
+                                    cb_PublishedYear.Enabled = false;
+                                }
+                                if (result == DialogResult.No)
+                                {
+
+                                }
+                            }
+
+                        }
+                    }
+                    catch (Exception)
+                    {
+
+                        MessageBox.Show("Select Publish Year and Course");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please filled up all the required fields:");
+                }
             }
 
         }
+
+
 
         private void ClearTextField()
         {
@@ -166,10 +198,12 @@ namespace Test
             cb_Course.SelectedIndex = -1;
             cb_PublishedYear.SelectedIndex = -1;
 
+
             tb_AuthorFName.Clear();
             tb_AuthorMName.Clear();
             tb_AuthorLName.Clear();
             tb_AuthorContactNumber.Clear();
+            cb_Gender.SelectedIndex = -1;
         }
 
         private void bt_AddAuthor_Click(object sender, EventArgs e)
@@ -184,30 +218,29 @@ namespace Test
             {
                 using (var ctx = new RRSContext())
                 {
-
-                    var author = new Author()
+                    if (!(tb_AuthorFName.Text == ""))
                     {
-                        AuthorFName = tb_AuthorFName.Text,
-                        AuthorMName = tb_AuthorMName.Text,
-                        AuthorLName = tb_AuthorLName.Text,
-                        AuthorContactNumber = tb_AuthorContactNumber.Text,
+                        var author = new Author()
+                        {
+                            AuthorName = tb_AuthorFName.Text,
+                            //AuthorMName = tb_AuthorMName.Text,
+                            //AuthorLName = tb_AuthorLName.Text,
+                            AuthorContactNumber = tb_AuthorContactNumber.Text,
+                            Gender = cb_Gender.SelectedItem.ToString(),
+                            ThesisTitleId = tempId,
+                        };
 
-                    };
+                        ctx.Authors.Add(author);
+                        ctx.SaveChanges();
+                        MessageBox.Show("Save Successful");
+                        ClearTextField();
+                        EnableAuthorControl();
+                    }
 
-                    ctx.Authors.Add(author);
-                    ctx.SaveChanges();
-                    MessageBox.Show("Save Successful");
 
                 }
 
 
-                DisablAuthorControl();
-                bt_SaveCourse.Enabled = true;
-
-                tb_AuthorFName.Clear();
-                tb_AuthorLName.Clear();
-                tb_AuthorMName.Clear();
-                tb_AuthorContactNumber.Clear();
 
 
             }
@@ -218,30 +251,30 @@ namespace Test
             }
 
 
-            dataGridView_Thesis.Enabled = true;
+
 
         }
 
         private void dataGridView_Thesis_DoubleClick(object sender, EventArgs e)
         {
-            if (dataGridView_Thesis.SelectedRows.Count > 0)
-            {
 
-
-                EnableAuthorControl();
-                bt_SaveCourse.Enabled = false;
-
-                dataGridView_Thesis.Enabled = false;
-            }
         }
 
         private void EnableAuthorControl()
         {
-            //bt_AddAuthor.Enabled = true;
-            tb_AuthorFName.Enabled = true;
-            tb_AuthorMName.Enabled = true;
-            tb_AuthorLName.Enabled = true;
-            tb_AuthorContactNumber.Enabled = false;
+          
+            DialogResult result = MessageBox.Show("Add more author?", " ", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+
+            }
+            if (result == DialogResult.No)
+            {
+                tb_Title.Enabled = true;
+                tb_Remarks.Enabled = true;
+                cb_Course.Enabled = true;
+                cb_PublishedYear.Enabled = true;
+            }
         }
 
         private void bt_Ecopy1_Click(object sender, EventArgs e)

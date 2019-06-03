@@ -43,10 +43,11 @@
             // 
             // tb_Course
             // 
+            this.tb_Course.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.tb_Course.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tb_Course.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_Course.ForeColor = System.Drawing.Color.DimGray;
-            this.tb_Course.Location = new System.Drawing.Point(113, 357);
+            this.tb_Course.Location = new System.Drawing.Point(113, 351);
             this.tb_Course.Multiline = true;
             this.tb_Course.Name = "tb_Course";
             this.tb_Course.Size = new System.Drawing.Size(221, 20);
@@ -54,9 +55,11 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(22, 358);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(22, 352);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 19);
             this.label1.TabIndex = 40;
@@ -64,7 +67,8 @@
             // 
             // dataGridView_Course
             // 
-            this.dataGridView_Course.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dataGridView_Course.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView_Course.AutoGenerateColumns = false;
             this.dataGridView_Course.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -81,6 +85,7 @@
             // 
             // bt_SaveCourse
             // 
+            this.bt_SaveCourse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.bt_SaveCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_SaveCourse.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_SaveCourse.ForeColor = System.Drawing.Color.White;
@@ -123,6 +128,7 @@
             this.Controls.Add(this.dataGridView_Course);
             this.Controls.Add(this.tb_Course);
             this.Controls.Add(this.label1);
+            this.MinimumSize = new System.Drawing.Size(1024, 444);
             this.Name = "CourseManagerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CourseManagerForm";

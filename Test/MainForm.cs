@@ -22,13 +22,20 @@ namespace ResearchRecordingSystem
 
             if (loginForm.DialogResult == DialogResult.OK)
             {
-                bt_ManageAccount.Enabled = false;
-                bt_CourseManagement.Enabled = false;
-                bt_ManageThesis.Enabled = false;
+                bt_ManageAccount.Visible = false;
+                bt_CourseManagement.Visible = false;
+                bt_ManageThesis.Visible = false;
+                button1.Visible = false;
             }
-
-
+            else if (loginForm.LoginAsClerk == true)
+            {
+                bt_ManageAccount.Visible = false;
+                bt_CourseManagement.Visible = false;
+            }
         }
+
+
+
 
         private void bt_ManageAccount_Click(object sender, EventArgs e)
         {
@@ -59,6 +66,11 @@ namespace ResearchRecordingSystem
         {
             BurrowBook burrow = new BurrowBook();
             burrow.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

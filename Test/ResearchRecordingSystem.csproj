@@ -60,6 +60,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Book and Author.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Book and Author.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CrystalReport.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -85,6 +91,14 @@
     <Compile Include="Migrations\201906010530336_BorrowUpdate.cs" />
     <Compile Include="Migrations\201906010530336_BorrowUpdate.Designer.cs">
       <DependentUpon>201906010530336_BorrowUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906011300324_BorrowModel.cs" />
+    <Compile Include="Migrations\201906011300324_BorrowModel.Designer.cs">
+      <DependentUpon>201906011300324_BorrowModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906011513090_FixTable.cs" />
+    <Compile Include="Migrations\201906011513090_FixTable.Designer.cs">
+      <DependentUpon>201906011513090_FixTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Author.cs" />
     <Compile Include="Models\Borrow.cs" />
@@ -150,6 +164,10 @@
     <Compile Include="ViewReportForrm.Designer.cs">
       <DependentUpon>ViewReportForrm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Book and Author.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Book and Author.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="CrystalReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReport.cs</LastGenOutput>
@@ -171,6 +189,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201906010530336_BorrowUpdate.resx">
       <DependentUpon>201906010530336_BorrowUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906011300324_BorrowModel.resx">
+      <DependentUpon>201906011300324_BorrowModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906011513090_FixTable.resx">
+      <DependentUpon>201906011513090_FixTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tabpages\AccountManagerForm.resx">
       <DependentUpon>AccountManagerForm.cs</DependentUpon>

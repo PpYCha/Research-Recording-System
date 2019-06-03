@@ -21,47 +21,68 @@ namespace Test.Tabpages
 
         private void AddBorrower()
         {
+
             using (var ctx = new RRSContext())
             {
-                var rb = new ResearchBook();
 
 
-
-                var borrower = new Borrow()
-                {
-
-                };
-
-
-                rb.Borrower = new Borrow
+                var borrow = new Borrow
                 {
                     BFullaName = tb_BFName.Text,
-                    BContactNumber = tb_BContactNumber.Text,
-                    BookBorrowedDate = dateTimePicker_Borowed.Value,
-                    BookReturnedDate = dateTimePicker_Return.Value,
-                    BorrowerId = rb.ThesisTitleId = 1,
+
+
                 };
-                //ctx.Borrows.Add(rb);
-                //ctx.SaveChanges();
+
+
+
+                ctx.Borrows.Add(borrow);
+                ctx.SaveChanges();
+
+
             }
+
         }
 
         private void BurrowBook_Load(object sender, EventArgs e)
         {
+            LoadBorrower();
+        }
+
+        private void LoadBorrower()
+        {
+
             using (RRSContext ctx = new RRSContext())
             {
-                researchBookBindingSource.DataSource = ctx.ResearchBooks.ToList();
+                var query = from p1 in ctx.ResearchBooks
+                                //from p2 in ctx.Borrows
 
-                //dataGridView_Borrow.DataSource = ctx.Borrows.ToList();
-                //foreach (DataGridViewColumn c in dataGridView_Borrow.Columns)
+                                //select new { p1.Title, p2.BFullaName, p2.BContactNumber, p2.BookBorrowedDate, p2.BookReturnedDate };
+                            select new { p1.Title, p1.Borrower.BFullaName, p1.Borrower.BookBorrowedDate, p1.Borrower.BookReturnedDate };
+                //foreach (var item in query)
                 //{
-
+                //    dataGridView_Borrow.DataSource = query.ToList();
                 //}
-                //dataGridView_Borrow.Columns["BFullaName"].HeaderText = "First Name";
-                //dataGridView_Borrow.Columns["BFullaName"].Visible = true;
+
+
+                dataGridView_Borrow.DataSource = query.ToList();
+                dataGridView_Borrow.Columns[0].HeaderCell.Value = "Title";
+                //dataGridView_Borrow.Columns[1].HeaderCell.Value = "Published Year";
+                //dataGridView_Borrow.Columns[2].HeaderCell.Value = "Course";
+
+                dataGridView_Borrow.Columns[1].HeaderCell.Value = "Borrower Name";
+                dataGridView_Borrow.Columns[2].HeaderCell.Value = "Borrowed Date";
+                dataGridView_Borrow.Columns[3].HeaderCell.Value = "Retrurn Date";
+                ////dataGridView_Thesis.Columns[4].HeaderCell.Value = "Author Last Name";
+
+
+                dataGridView_Borrow.BeginEdit(true);
+
+
 
             }
         }
+
+
 
         private void dataGridView_Borrow_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
@@ -81,6 +102,16 @@ namespace Test.Tabpages
         }
 
         private void dataGridView_Borrow_DataSourceChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView_Borrow_DataSourceChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView_Borrow_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
