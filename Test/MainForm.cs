@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
 using Test;
-using Test.Properties;
 using Test.Tabpages;
 
 namespace ResearchRecordingSystem
@@ -17,21 +16,21 @@ namespace ResearchRecordingSystem
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            LoginForm loginForm = new LoginForm();
-            loginForm.ShowDialog();
+            //LoginForm loginForm = new LoginForm();
+            //loginForm.ShowDialog();
 
-            if (loginForm.DialogResult == DialogResult.OK)
-            {
-                bt_ManageAccount.Visible = false;
-                bt_CourseManagement.Visible = false;
-                bt_ManageThesis.Visible = false;
-                button1.Visible = false;
-            }
-            else if (loginForm.LoginAsClerk == true)
-            {
-                bt_ManageAccount.Visible = false;
-                bt_CourseManagement.Visible = false;
-            }
+            //if (loginForm.DialogResult == DialogResult.OK)
+            //{
+            //    bt_ManageAccount.Visible = false;
+            //    bt_CourseManagement.Visible = false;
+            //    bt_ManageThesis.Visible = false;
+            //    button1.Visible = false;
+            //}
+            //else if (loginForm.LoginAsClerk == true)
+            //{
+            //    bt_ManageAccount.Visible = false;
+            //    bt_CourseManagement.Visible = false;
+            //}
         }
 
 
@@ -71,6 +70,18 @@ namespace ResearchRecordingSystem
         private void button2_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ListofBorrowedBooks listofBorrowedBooks = new ListofBorrowedBooks();
+            listofBorrowedBooks.ShowDialog();
+        }
+
+        private void bt_ReturnABook_Click(object sender, EventArgs e)
+        {
+            ReturnABorrowedBook returnABorrowedBook = new ReturnABorrowedBook();
+            returnABorrowedBook.ShowDialog();
         }
     }
 }

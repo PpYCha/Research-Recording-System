@@ -136,42 +136,60 @@ namespace Test
                                     Remarks = tb_Remarks.Text,
                                     PublishedYear = cb_PublishedYear.SelectedItem.ToString(),
                                     CourseNameRb = cb_Course.GetItemText(cb_Course.SelectedItem),
-                                    NumberOfCopies = tb_NumberOfCopies.Text,
+                                    NumberOfCopies = Int32.Parse(tb_NumberOfCopies.Text),
                                 };
                                 ctx.ResearchBooks.Add(thesisTitle);
                                 ctx.SaveChanges();
 
                                 var author = new Author();
 
-                                author.AuthorName = tb_AuthorFName.Text;
-                                //AuthorMName = tb_AuthorMName.Text,
-                                //AuthorLName = tb_AuthorLName.Text,
-                                author.AuthorContactNumber = tb_AuthorContactNumber.Text;
-                                author.Gender = cb_Gender.SelectedItem.ToString();
-                                author.ThesisTitleId = thesisTitle.ThesisTitleId;
+                                //author.AuthorName = tb_AuthorFName.Text;
+                                ////AuthorMName = tb_AuthorMName.Text,
+                                ////AuthorLName = tb_AuthorLName.Text,
+                                //author.AuthorContactNumber = tb_AuthorContactNumber.Text;
+                                //author.Gender = cb_Gender.SelectedItem.ToString();
+                                //author.ThesisTitleId = thesisTitle.ThesisTitleId;
+                                //System.Text.StringBuilder sb = new System.Text.StringBuilder();
+                                //foreach (object item in listBox1.Items)
+                                //{
+                                //    author.AuthorName = (item.ToString());
+                                //    author.ThesisTitleId = thesisTitle.ThesisTitleId;
+                                //    ctx.Authors.Add(author);
 
-                                tempId = author.ThesisTitleId;
-                                ctx.Authors.Add(author);
-                                ctx.SaveChanges();
+                                //}
+                                for (int row = 0; row <= dataGridView1.Rows.Count; row++)
+                                {
+                                    author.AuthorName = dataGridView1.Rows[row].Cells["Column1"].Value.ToString();
+                                    author.AuthorContactNumber = dataGridView1.Rows[row].Cells["Column2"].Value.ToString();
+                                    author.Gender = dataGridView1.Rows[row].Cells["Column3"].Value.ToString();
+                                    author.ThesisTitleId = thesisTitle.ThesisTitleId;
+                                    ctx.Authors.Add(author);
+                                    ctx.SaveChanges();
+
+                                }
+
+
+
+
 
 
 
                                 LoadThesis();
                                 MessageBox.Show("Save Successful");
                                 ClearTextField();
-                                DialogResult result = MessageBox.Show("Add more author?", " ", MessageBoxButtons.YesNo);
+                                //DialogResult result = MessageBox.Show("Add more author?", " ", MessageBoxButtons.YesNo);
 
-                                if (result == DialogResult.Yes)
-                                {
-                                    tb_Title.Enabled = false;
-                                    tb_Remarks.Enabled = false;
-                                    cb_Course.Enabled = false;
-                                    cb_PublishedYear.Enabled = false;
-                                }
-                                if (result == DialogResult.No)
-                                {
+                                //if (result == DialogResult.Yes)
+                                //{
+                                //    tb_Title.Enabled = false;
+                                //    tb_Remarks.Enabled = false;
+                                //    cb_Course.Enabled = false;
+                                //    cb_PublishedYear.Enabled = false;
+                                //}
+                                //if (result == DialogResult.No)
+                                //{
 
-                                }
+                                //}
                             }
 
                         }
@@ -179,7 +197,11 @@ namespace Test
                     catch (Exception)
                     {
 
-                        MessageBox.Show("Select Publish Year and Course");
+                        //MessageBox.Show("Select Publish Year and Course");
+                        LoadThesis();
+                        MessageBox.Show("Save Successful");
+                        ClearTextField();
+
                     }
                 }
                 else
@@ -198,13 +220,15 @@ namespace Test
             tb_Remarks.Clear();
             cb_Course.SelectedIndex = -1;
             cb_PublishedYear.SelectedIndex = -1;
-
+            tb_NumberOfCopies.Clear();
 
             tb_AuthorFName.Clear();
             tb_AuthorMName.Clear();
             tb_AuthorLName.Clear();
             tb_AuthorContactNumber.Clear();
             cb_Gender.SelectedIndex = -1;
+            dataGridView1.Rows.Clear();
+            dataGridView1.Refresh();
         }
 
         private void bt_AddAuthor_Click(object sender, EventArgs e)
@@ -334,6 +358,46 @@ namespace Test
         private void dataGridView_Thesis_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             e.Cancel = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+
+            //listBox1.Items.Add((tb_AuthorFName.Text + ("\t \t \t") + tb_AuthorContactNumber.Text + "\t" + cb_Gender.SelectedItem.ToString()).Replace("\r", "").Replace("\n", ""));
+            try
+            {
+                dataGridView1.Rows.Add(tb_AuthorFName.Text, tb_AuthorContactNumber.Text, cb_Gender.SelectedItem.ToString());
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Please filled up all the required fields:");
+            }
+
+
+        }
+
+        private void bt_RemoveAuthor_Click(object sender, EventArgs e)
+        {
+            //for (int i = listBox1.SelectedIndices.Count - 1; i >= 0; i--)
+            //{
+            //    listBox1.Items.RemoveAt(listBox1.SelectedIndices[i]);
+            //}
+            try
+            {
+                if (this.dataGridView1.SelectedRows.Count > 0)
+                {
+                    dataGridView1.Rows.RemoveAt(this.dataGridView1.SelectedRows[0].Index);
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+
         }
     }
 }

@@ -104,6 +104,18 @@
     <Compile Include="Migrations\201906031038513_AddNumberOfCopies.Designer.cs">
       <DependentUpon>201906031038513_AddNumberOfCopies.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201906050827333_FixResearchBook.cs" />
+    <Compile Include="Migrations\201906050827333_FixResearchBook.Designer.cs">
+      <DependentUpon>201906050827333_FixResearchBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906101514174_FixBOrrwo.cs" />
+    <Compile Include="Migrations\201906101514174_FixBOrrwo.Designer.cs">
+      <DependentUpon>201906101514174_FixBOrrwo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906101534481_UpdateBorrow.cs" />
+    <Compile Include="Migrations\201906101534481_UpdateBorrow.Designer.cs">
+      <DependentUpon>201906101534481_UpdateBorrow.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Author.cs" />
     <Compile Include="Models\Borrow.cs" />
     <Compile Include="Models\ResearchBook.cs" />
@@ -119,10 +131,10 @@
     <Compile Include="Tabpages\AccountManagerForm.Designer.cs">
       <DependentUpon>AccountManagerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TabTransactionBorrowingReturning\BorrowABook.cs">
+    <Compile Include="Tabpages\Borrowing\BorrowABook.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TabTransactionBorrowingReturning\BorrowABook.Designer.cs">
+    <Compile Include="Tabpages\Borrowing\BorrowABook.Designer.cs">
       <DependentUpon>BorrowABook.cs</DependentUpon>
     </Compile>
     <Compile Include="Tabpages\CourseManagerForm.cs">
@@ -144,22 +156,22 @@
     <Compile Include="Models\RRSContext.cs" />
     <Compile Include="Models\RRSDbInitializer.cs" />
     <Compile Include="Models\UserAccount.cs" />
-    <Compile Include="TabTransactionBorrowingReturning\ListofBooks.cs">
+    <Compile Include="Tabpages\Borrowing\ListofBooks.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TabTransactionBorrowingReturning\ListofBooks.Designer.cs">
+    <Compile Include="Tabpages\Borrowing\ListofBooks.Designer.cs">
       <DependentUpon>ListofBooks.cs</DependentUpon>
     </Compile>
-    <Compile Include="TabTransactionBorrowingReturning\ListofBorrowedBooks.cs">
+    <Compile Include="Tabpages\Borrowing\ListofBorrowedBooks.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TabTransactionBorrowingReturning\ListofBorrowedBooks.Designer.cs">
+    <Compile Include="Tabpages\Borrowing\ListofBorrowedBooks.Designer.cs">
       <DependentUpon>ListofBorrowedBooks.cs</DependentUpon>
     </Compile>
-    <Compile Include="TabTransactionBorrowingReturning\ReturnABorrowedBook.cs">
+    <Compile Include="Tabpages\Borrowing\ReturnABorrowedBook.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TabTransactionBorrowingReturning\ReturnABorrowedBook.Designer.cs">
+    <Compile Include="Tabpages\Borrowing\ReturnABorrowedBook.Designer.cs">
       <DependentUpon>ReturnABorrowedBook.cs</DependentUpon>
     </Compile>
     <Compile Include="Tabpages\SearchThesis.cs">
@@ -173,6 +185,12 @@
     </Compile>
     <Compile Include="Tabpages\ThesisManagerForm.Designer.cs">
       <DependentUpon>ThesisManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tabpages\ViewBookInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tabpages\ViewBookInformation.Designer.cs">
+      <DependentUpon>ViewBookInformation.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewECopyForm.cs">
       <SubType>Form</SubType>
@@ -221,10 +239,19 @@
     <EmbeddedResource Include="Migrations\201906031038513_AddNumberOfCopies.resx">
       <DependentUpon>201906031038513_AddNumberOfCopies.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906050827333_FixResearchBook.resx">
+      <DependentUpon>201906050827333_FixResearchBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906101514174_FixBOrrwo.resx">
+      <DependentUpon>201906101514174_FixBOrrwo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906101534481_UpdateBorrow.resx">
+      <DependentUpon>201906101534481_UpdateBorrow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tabpages\AccountManagerForm.resx">
       <DependentUpon>AccountManagerForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TabTransactionBorrowingReturning\BorrowABook.resx">
+    <EmbeddedResource Include="Tabpages\Borrowing\BorrowABook.resx">
       <DependentUpon>BorrowABook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tabpages\CourseManagerForm.resx">
@@ -242,13 +269,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="TabTransactionBorrowingReturning\ListofBooks.resx">
+    <EmbeddedResource Include="Tabpages\Borrowing\ListofBooks.resx">
       <DependentUpon>ListofBooks.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TabTransactionBorrowingReturning\ListofBorrowedBooks.resx">
+    <EmbeddedResource Include="Tabpages\Borrowing\ListofBorrowedBooks.resx">
       <DependentUpon>ListofBorrowedBooks.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TabTransactionBorrowingReturning\ReturnABorrowedBook.resx">
+    <EmbeddedResource Include="Tabpages\Borrowing\ReturnABorrowedBook.resx">
       <DependentUpon>ReturnABorrowedBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tabpages\SearchThesis.resx">
@@ -258,6 +285,9 @@
     <EmbeddedResource Include="Tabpages\ThesisManagerForm.resx">
       <DependentUpon>ThesisManagerForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Tabpages\ViewBookInformation.resx">
+      <DependentUpon>ViewBookInformation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ViewECopyForm.resx">
       <DependentUpon>ViewECopyForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -265,6 +295,7 @@
       <DependentUpon>ViewReportForrm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\ResearchRecordingSystem.Author.datasource" />
     <None Include="Properties\DataSources\ResearchRecordingSystem.Borrow.datasource" />
     <None Include="Properties\DataSources\ResearchRecordingSystem.Course.datasource" />
     <None Include="Properties\DataSources\ResearchRecordingSystem.ResearchBook.datasource" />

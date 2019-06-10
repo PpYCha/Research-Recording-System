@@ -22,8 +22,6 @@ namespace ResearchRecordingSystem
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-
-
             modelBuilder.Entity<UserAccount>().HasKey(k => k.UserId)
                 .Property(p => p.UserId).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
 
@@ -39,7 +37,6 @@ namespace ResearchRecordingSystem
             modelBuilder.Entity<Borrow>().HasKey(k => k.BorrowerId)
                   .Property(p => p.BorrowerId).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
 
-            
         }
     }
 

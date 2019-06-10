@@ -9,9 +9,8 @@ namespace ResearchRecordingSystem
         public string PublishedYear { get; set; }
         public string Remarks { get; set; }
         public string CourseNameRb { get; set; }
-        public string NumberOfCopies { get; set; }
-
-        public virtual Borrow Borrower { get; set; }
+        public int NumberOfCopies { get; set; }
+        public virtual ICollection<Borrow> Borrower { get; set; }
         public virtual ICollection<Author> Authors { get; set; }
         //public ICollection<Course> Course { get; set; }
     }

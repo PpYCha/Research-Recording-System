@@ -17,28 +17,42 @@ namespace Test.Tabpages
 
             AddBorrower();
 
+            ListofBorrowedBooks listofBorrowedBooks = new ListofBorrowedBooks();
+            listofBorrowedBooks.ShowDialog();
+
         }
 
         private void AddBorrower()
         {
-
-            using (var ctx = new RRSContext())
+            try
             {
 
 
-                var borrow = new Borrow
+                using (var ctx = new RRSContext())
                 {
-                    BFullaName = tb_BFName.Text,
+
+                    int tempId = Int32.Parse(dataGridView_Borrow.SelectedRows[0].Cells[0].Value.ToString());
+
+                    var borrow = new Borrow
+                    {
+                        BFullName = tb_BFName.Text,
+                        BContactNumber = tb_BContactNumber.Text,
+                        BookBorrowedDate = DateTime.Now,
+                        DateWillRetrun = dateTimePicker_Return.Value.Date,
+                        ThesisTitleId = tempId,
 
 
-                };
+                    };
+                    ctx.Borrows.Add(borrow);
+                    ctx.SaveChanges();
 
 
+                }
+            }
+            catch (Exception)
+            {
 
-                ctx.Borrows.Add(borrow);
-                ctx.SaveChanges();
-
-
+                throw;
             }
 
         }
@@ -53,11 +67,11 @@ namespace Test.Tabpages
 
             using (RRSContext ctx = new RRSContext())
             {
-                var query = from p1 in ctx.ResearchBooks
+                /* var query = from p1 in ctx.ResearchBooks
                                 //from p2 in ctx.Borrows
 
                                 //select new { p1.Title, p2.BFullaName, p2.BContactNumber, p2.BookBorrowedDate, p2.BookReturnedDate };
-                            select new { p1.Title, p1.Borrower.BFullaName, p1.Borrower.BookBorrowedDate, p1.Borrower.BookReturnedDate };
+                            select new { p1.Title, p1.Borrower.BFullName, p1.Borrower.BookBorrowedDate, p1.Borrower.DateWillRetrun };
                 //foreach (var item in query)
                 //{
                 //    dataGridView_Borrow.DataSource = query.ToList();
@@ -75,9 +89,9 @@ namespace Test.Tabpages
                 ////dataGridView_Thesis.Columns[4].HeaderCell.Value = "Author Last Name";
 
 
-                dataGridView_Borrow.BeginEdit(true);
+                dataGridView_Borrow.BeginEdit(true); */
 
-
+                researchBookBindingSource.DataSource = ctx.ResearchBooks.ToList();
 
             }
         }

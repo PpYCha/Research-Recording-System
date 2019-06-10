@@ -11,7 +11,7 @@ namespace Test.Tabpages
         public SearchThesis()
         {
             InitializeComponent();
-            LoadThesis();
+
         }
 
         private void LoadThesis()
@@ -106,11 +106,69 @@ namespace Test.Tabpages
 
         private void dataGridViewSearch_DoubleClick(object sender, EventArgs e)
         {
-            if (dataGridViewSearch.SelectedRows.Count > 0)
-            {
-                ViewReportForrm viewclientform = new ViewReportForrm();
 
-                viewclientform.ShowDialog();
+        }
+
+        private void dataGridViewSearch_Click(object sender, EventArgs e)
+        {
+
+            ViewBookInformation viewBookInformation = new ViewBookInformation();
+            viewBookInformation.dgvr = dataGridViewSearch.Rows[0];
+            viewBookInformation.Show();
+
+
+
+            //if (dataGridViewSearch.SelectedRows.Count > 0)
+            //{
+            //    using (RRSContext ctx = new RRSContext())
+            //    {
+            //        int tempId = Int32.Parse(dataGridViewSearch.SelectedRows[0].Cells[0].Value.ToString());
+            //        authorBindingSource.DataSource = ctx.Authors.Where(x => x.ThesisTitleId == tempId).ToList();
+
+
+
+            //    }
+
+            //}
+        }
+
+        private void tb_TitleSearch_TextChanged(object sender, EventArgs e)
+        {
+            using (RRSContext ctx = new RRSContext())
+            {
+                researchBookBindingSource.DataSource = ctx.ResearchBooks.Where(x => x.Title.Contains(tb_Search.Text)).ToList();
+
+
+            }
+        }
+
+        private void tb_PublishYearSearch_TextChanged(object sender, EventArgs e)
+        {
+            using (RRSContext ctx = new RRSContext())
+            {
+                researchBookBindingSource.DataSource = ctx.ResearchBooks.Where(x => x.PublishedYear.Contains(tb_PublishYearSearch.Text)).ToList();
+
+
+            }
+        }
+
+        private void tb_RemarksSearch_TextChanged(object sender, EventArgs e)
+        {
+            using (RRSContext ctx = new RRSContext())
+            {
+                researchBookBindingSource.DataSource = ctx.ResearchBooks.Where(x => x.Remarks.Contains(tb_RemarksSearch.Text)).ToList();
+
+
+            }
+        }
+
+        private void tb_CourseSearch_TextChanged(object sender, EventArgs e)
+        {
+            using (RRSContext ctx = new RRSContext())
+            {
+                researchBookBindingSource.DataSource = ctx.ResearchBooks.Where(x => x.CourseNameRb.Contains(tb_CourseSearch.Text)).ToList();
+
+
             }
         }
     }
