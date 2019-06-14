@@ -26,7 +26,7 @@ namespace ResearchRecordingSystemInCollegeOfScience.Tabpages
                         ctx.SaveChanges();
 
                         MessageBox.Show("Return Succesfully");
-
+                        /////
                         dataGridView1.DataSource = ctx.Borrows.ToList();
                     }
 
