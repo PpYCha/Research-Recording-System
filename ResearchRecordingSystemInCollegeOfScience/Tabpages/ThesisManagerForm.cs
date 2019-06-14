@@ -221,7 +221,8 @@ namespace ResearchRecordingSystemInCollegeOfScience
             cb_PublishedYear.SelectedIndex = -1;
             tb_NumberOfCopies.Clear();
             cb_Classfication.SelectedIndex = -1;
-
+            dataGridView1.Rows.Clear();
+            dataGridView1.Refresh();
 
 
             ClearAuthor();
@@ -234,8 +235,7 @@ namespace ResearchRecordingSystemInCollegeOfScience
             tb_AuthorLName.Clear();
             tb_AuthorContactNumber.Clear();
             cb_Gender.SelectedIndex = -1;
-            dataGridView1.Rows.Clear();
-            dataGridView1.Refresh();
+
 
         }
 
@@ -478,6 +478,11 @@ namespace ResearchRecordingSystemInCollegeOfScience
         }
 
         private void cb_Course_SelectedValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void thesisTitleBindingSource_CurrentChanged(object sender, EventArgs e)
         {
 
         }

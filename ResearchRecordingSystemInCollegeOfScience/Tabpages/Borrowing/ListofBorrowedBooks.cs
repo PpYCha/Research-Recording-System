@@ -25,7 +25,7 @@ namespace ResearchRecordingSystemInCollegeOfScience.Tabpages
                 var query = from p1 in ctx.Borrows
                             join f1 in ctx.ResearchBooks on p1.BorrowerId equals f1.ThesisTitleId
                             select new { p1.BFullName, p1.BContactNumber, p1.BookBorrowedDate, p1.DateWillRetrun, f1.Title, p1.NoOfBookBorrowed /*, f1.AuthorLName*/ };
-                //Bind the gridview.
+
 
 
                 dataGridView1.DataSource = query.ToList();
@@ -40,6 +40,11 @@ namespace ResearchRecordingSystemInCollegeOfScience.Tabpages
 
 
 
+        }
+
+        private void dataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            e.Cancel = false;
         }
     }
 }

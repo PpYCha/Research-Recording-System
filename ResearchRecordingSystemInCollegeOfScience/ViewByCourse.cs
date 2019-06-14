@@ -63,26 +63,28 @@ namespace ResearchRecordingSystemInCollegeOfScience.Tabpages.ViewReport
 
             if (chb_Course.Checked == true)
             {
+                //string ttt = "BSIT";
+                //crystalReportViewer1.SelectionFormula = "{ResearchBooks.CourseNameRb} Like '*" + ttt + "*'";
                 crystalReportViewer1.SelectionFormula = "{ResearchBooks.CourseNameRb} Like '*" + cb_Course.GetItemText(cb_Course.SelectedItem) + "*'";
                 crystalReportViewer1.RefreshReport();
 
 
             }
-            else if (chb_YearPublish.Checked == true)
-            {
-                crystalReportViewer1.SelectionFormula = "{ResearchBooks.PublishedYear} Like '*" + cb_YearPublished.GetItemText(cb_YearPublished.SelectedItem) + "*'";
-                crystalReportViewer1.RefreshReport();
-            }
-            else if (chb_Author.Checked == true)
-            {
-                crystalReportViewer1.SelectionFormula = "{ResearchBooks.PublishedYear} Like '*" + cb_YearPublished.GetItemText(cb_YearPublished.SelectedItem) + "*'";
-                crystalReportViewer1.RefreshReport();
-            }
-            else if (chb_Category.Checked == true)
-            {
-                crystalReportViewer1.SelectionFormula = "{Classfications.ClassficationName} Like '*" + cb_Classification.GetItemText(cb_Classification.SelectedItem) + "*'";
-                crystalReportViewer1.RefreshReport();
-            }
+            //else if (chb_YearPublish.Checked == true)
+            //{
+            //    crystalReportViewer1.SelectionFormula = "{ResearchBooks.PublishedYear} Like '*" + cb_YearPublished.GetItemText(cb_YearPublished.SelectedItem) + "*'";
+            //    crystalReportViewer1.RefreshReport();
+            //}
+            //else if (chb_Author.Checked == true)
+            //{
+            //    crystalReportViewer1.SelectionFormula = "{ResearchBooks.PublishedYear} Like '*" + cb_YearPublished.GetItemText(cb_YearPublished.SelectedItem) + "*'";
+            //    crystalReportViewer1.RefreshReport();
+            //}
+            //else if (chb_Category.Checked == true)
+            //{
+            //    crystalReportViewer1.SelectionFormula = "{Classfications.ClassficationName} Like '*" + cb_Classification.GetItemText(cb_Classification.SelectedItem) + "*'";
+            //    crystalReportViewer1.RefreshReport();
+            //}
 
 
 

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThesisManagerForm));
             this.tb_Remarks = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -66,14 +65,10 @@
             this.label10 = new System.Windows.Forms.Label();
             this.tb_NumberOfCopies = new System.Windows.Forms.TextBox();
             this.dataGridView_Thesis = new System.Windows.Forms.DataGridView();
-            this.thesisTitleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.courseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Thesis)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.thesisTitleBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tb_Remarks
@@ -349,7 +344,6 @@
             this.Column3});
             this.dataGridView1.Location = new System.Drawing.Point(15, 102);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(692, 221);
             this.dataGridView1.TabIndex = 76;
@@ -506,14 +500,6 @@
             this.dataGridView_Thesis.Visible = false;
             this.dataGridView_Thesis.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView_Thesis_DataError);
             // 
-            // thesisTitleBindingSource
-            // 
-            this.thesisTitleBindingSource.DataSource = typeof(ResearchRecordingSystemInCollegeOfScience.ResearchBook);
-            // 
-            // courseBindingSource
-            // 
-            this.courseBindingSource.DataSource = typeof(ResearchRecordingSystemInCollegeOfScience.Course);
-            // 
             // ThesisManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -543,8 +529,6 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Thesis)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.thesisTitleBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -563,8 +547,6 @@
         private System.Windows.Forms.Button bt_Ecopy1;
         private System.Windows.Forms.Button bt_Ecopy2;
         private System.Windows.Forms.ComboBox cb_PublishedYear;
-        private System.Windows.Forms.BindingSource courseBindingSource;
-        private System.Windows.Forms.BindingSource thesisTitleBindingSource;
         private System.Windows.Forms.TextBox tb_AuthorContactNumber;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tb_AuthorFName;

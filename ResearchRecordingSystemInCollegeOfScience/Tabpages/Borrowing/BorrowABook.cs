@@ -1,5 +1,6 @@
 ﻿using ResearchRecordingSystemInCollegeOfScience.Tabpages.Borrowing;
 using System;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -34,6 +35,19 @@ namespace ResearchRecordingSystemInCollegeOfScience.Tabpages
 
                         int tempId = Int32.Parse(dataGridView_Borrow.SelectedRows[0].Cells[0].Value.ToString());
 
+
+                        var categoryid = (from cats in ctx.ResearchBooks
+                                          where cats.ThesisTitleId.Equals(tempId)
+                                          select cats.NumberOfCopies).SingleOrDefault();
+
+                        var bookBorrowed = categoryid - 1;
+
+                        var rb = new ResearchBook() { ThesisTitleId = tempId, NumberOfCopies = bookBorrowed };
+                        ctx.ResearchBooks.Attach(rb);
+                        ctx.Entry(rb).Property(x => x.NumberOfCopies).IsModified = true;
+                        ctx.SaveChanges();
+
+
                         var borrow = new Borrow
                         {
                             BFullName = tb_BFName.Text,
@@ -41,14 +55,14 @@ namespace ResearchRecordingSystemInCollegeOfScience.Tabpages
                             BookBorrowedDate = DateTime.Now,
                             DateWillRetrun = dateTimePicker_Return.Value.Date,
                             ThesisTitleId = tempId,
-
-
+                            NoOfBookBorrowed = 1,
                         };
-                        ctx.Borrows.Add(borrow);
+                        ctx.Borrows.AddOrUpdate(borrow);
                         ctx.SaveChanges();
                         ListofBorrowedBooks listofBorrowedBooks = new ListofBorrowedBooks();
                         listofBorrowedBooks.ShowDialog();
 
+                      
                     }
                 }
                 else
@@ -145,6 +159,6 @@ namespace ResearchRecordingSystemInCollegeOfScience.Tabpages
             }
         }
 
-       
+
     }
 }
