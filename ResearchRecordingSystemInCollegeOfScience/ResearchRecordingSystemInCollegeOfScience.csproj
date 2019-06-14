@@ -1,0 +1,426 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{65AFD716-FCA5-48FE-9EAD-B91CF657565B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ResearchRecordingSystemInCollegeOfScience</RootNamespace>
+    <AssemblyName>ResearchRecordingSystemInCollegeOfScience</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Tabpages\ViewReport\Book and Author.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Book and Author.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tabpages\ViewReport\CrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Migrations\201905301618514_asdass.cs" />
+    <Compile Include="Migrations\201905301618514_asdass.Designer.cs">
+      <DependentUpon>201905301618514_asdass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905301801312_AddEcopy.cs" />
+    <Compile Include="Migrations\201905301801312_AddEcopy.Designer.cs">
+      <DependentUpon>201905301801312_AddEcopy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905302251176_FixAuthor.cs" />
+    <Compile Include="Migrations\201905302251176_FixAuthor.Designer.cs">
+      <DependentUpon>201905302251176_FixAuthor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906010454551_Borrow.cs" />
+    <Compile Include="Migrations\201906010454551_Borrow.Designer.cs">
+      <DependentUpon>201906010454551_Borrow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906010530336_BorrowUpdate.cs" />
+    <Compile Include="Migrations\201906010530336_BorrowUpdate.Designer.cs">
+      <DependentUpon>201906010530336_BorrowUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906011300324_BorrowModel.cs" />
+    <Compile Include="Migrations\201906011300324_BorrowModel.Designer.cs">
+      <DependentUpon>201906011300324_BorrowModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906011513090_FixTable.cs" />
+    <Compile Include="Migrations\201906011513090_FixTable.Designer.cs">
+      <DependentUpon>201906011513090_FixTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906031038513_AddNumberOfCopies.cs" />
+    <Compile Include="Migrations\201906031038513_AddNumberOfCopies.Designer.cs">
+      <DependentUpon>201906031038513_AddNumberOfCopies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906050827333_FixResearchBook.cs" />
+    <Compile Include="Migrations\201906050827333_FixResearchBook.Designer.cs">
+      <DependentUpon>201906050827333_FixResearchBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906101514174_FixBOrrwo.cs" />
+    <Compile Include="Migrations\201906101514174_FixBOrrwo.Designer.cs">
+      <DependentUpon>201906101514174_FixBOrrwo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906101534481_UpdateBorrow.cs" />
+    <Compile Include="Migrations\201906101534481_UpdateBorrow.Designer.cs">
+      <DependentUpon>201906101534481_UpdateBorrow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906111002467_asda.cs" />
+    <Compile Include="Migrations\201906111002467_asda.Designer.cs">
+      <DependentUpon>201906111002467_asda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906121209080_Cataloging.cs" />
+    <Compile Include="Migrations\201906121209080_Cataloging.Designer.cs">
+      <DependentUpon>201906121209080_Cataloging.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906121224370_update.cs" />
+    <Compile Include="Migrations\201906121224370_update.Designer.cs">
+      <DependentUpon>201906121224370_update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906121440472_classification.cs" />
+    <Compile Include="Migrations\201906121440472_classification.Designer.cs">
+      <DependentUpon>201906121440472_classification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906121507359_Latest.cs" />
+    <Compile Include="Migrations\201906121507359_Latest.Designer.cs">
+      <DependentUpon>201906121507359_Latest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906132000168_updateNoOfBook.cs" />
+    <Compile Include="Migrations\201906132000168_updateNoOfBook.Designer.cs">
+      <DependentUpon>201906132000168_updateNoOfBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Author.cs" />
+    <Compile Include="Models\Borrow.cs" />
+    <Compile Include="Models\Classifacation.cs" />
+    <Compile Include="Models\ResearchBook.cs" />
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tabpages\AccountManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tabpages\AccountManagerForm.Designer.cs">
+      <DependentUpon>AccountManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tabpages\Borrowing\BorrowABook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tabpages\Borrowing\BorrowABook.Designer.cs">
+      <DependentUpon>BorrowABook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tabpages\Borrowing\ViewBorrowBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tabpages\Borrowing\ViewBorrowBook.Designer.cs">
+      <DependentUpon>ViewBorrowBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tabpages\ClassificationOfThesis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tabpages\ClassificationOfThesis.Designer.cs">
+      <DependentUpon>ClassificationOfThesis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tabpages\CourseManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tabpages\CourseManagerForm.Designer.cs">
+      <DependentUpon>CourseManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Course.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Models\RRSContext.cs" />
+    <Compile Include="Models\RRSDbInitializer.cs" />
+    <Compile Include="Models\UserAccount.cs" />
+    <Compile Include="Tabpages\Borrowing\ListofBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tabpages\Borrowing\ListofBooks.Designer.cs">
+      <DependentUpon>ListofBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tabpages\Borrowing\ListofBorrowedBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tabpages\Borrowing\ListofBorrowedBooks.Designer.cs">
+      <DependentUpon>ListofBorrowedBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tabpages\Borrowing\ReturnABorrowedBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tabpages\Borrowing\ReturnABorrowedBook.Designer.cs">
+      <DependentUpon>ReturnABorrowedBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tabpages\SearchThesis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tabpages\SearchThesis.Designer.cs">
+      <DependentUpon>SearchThesis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tabpages\ThesisManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tabpages\ThesisManagerForm.Designer.cs">
+      <DependentUpon>ThesisManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tabpages\ViewBookInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tabpages\ViewBookInformation.Designer.cs">
+      <DependentUpon>ViewBookInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewByCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewByCourse.Designer.cs">
+      <DependentUpon>ViewByCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewByCourseRpt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ViewByCourseRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ViewECopyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewECopyForm.Designer.cs">
+      <DependentUpon>ViewECopyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tabpages\ViewReport\ViewReportForrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tabpages\ViewReport\ViewReportForrm.Designer.cs">
+      <DependentUpon>ViewReportForrm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Tabpages\ViewReport\Book and Author.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Book and Author.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tabpages\ViewReport\CrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905301618514_asdass.resx">
+      <DependentUpon>201905301618514_asdass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905301801312_AddEcopy.resx">
+      <DependentUpon>201905301801312_AddEcopy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905302251176_FixAuthor.resx">
+      <DependentUpon>201905302251176_FixAuthor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906010454551_Borrow.resx">
+      <DependentUpon>201906010454551_Borrow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906010530336_BorrowUpdate.resx">
+      <DependentUpon>201906010530336_BorrowUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906011300324_BorrowModel.resx">
+      <DependentUpon>201906011300324_BorrowModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906011513090_FixTable.resx">
+      <DependentUpon>201906011513090_FixTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906031038513_AddNumberOfCopies.resx">
+      <DependentUpon>201906031038513_AddNumberOfCopies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906050827333_FixResearchBook.resx">
+      <DependentUpon>201906050827333_FixResearchBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906101514174_FixBOrrwo.resx">
+      <DependentUpon>201906101514174_FixBOrrwo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906101534481_UpdateBorrow.resx">
+      <DependentUpon>201906101534481_UpdateBorrow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906111002467_asda.resx">
+      <DependentUpon>201906111002467_asda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906121209080_Cataloging.resx">
+      <DependentUpon>201906121209080_Cataloging.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906121224370_update.resx">
+      <DependentUpon>201906121224370_update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906121440472_classification.resx">
+      <DependentUpon>201906121440472_classification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906121507359_Latest.resx">
+      <DependentUpon>201906121507359_Latest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906132000168_updateNoOfBook.resx">
+      <DependentUpon>201906132000168_updateNoOfBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tabpages\AccountManagerForm.resx">
+      <DependentUpon>AccountManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tabpages\Borrowing\BorrowABook.resx">
+      <DependentUpon>BorrowABook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tabpages\Borrowing\ViewBorrowBook.resx">
+      <DependentUpon>ViewBorrowBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tabpages\ClassificationOfThesis.resx">
+      <DependentUpon>ClassificationOfThesis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tabpages\CourseManagerForm.resx">
+      <DependentUpon>CourseManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Tabpages\Borrowing\ListofBooks.resx">
+      <DependentUpon>ListofBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tabpages\Borrowing\ListofBorrowedBooks.resx">
+      <DependentUpon>ListofBorrowedBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tabpages\Borrowing\ReturnABorrowedBook.resx">
+      <DependentUpon>ReturnABorrowedBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tabpages\SearchThesis.resx">
+      <DependentUpon>SearchThesis.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tabpages\ThesisManagerForm.resx">
+      <DependentUpon>ThesisManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tabpages\ViewBookInformation.resx">
+      <DependentUpon>ViewBookInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewByCourse.resx">
+      <DependentUpon>ViewByCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewByCourseRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ViewByCourseRpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewECopyForm.resx">
+      <DependentUpon>ViewECopyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tabpages\ViewReport\ViewReportForrm.resx">
+      <DependentUpon>ViewReportForrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Author.datasource" />
+    <None Include="Properties\DataSources\Classifacation.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
