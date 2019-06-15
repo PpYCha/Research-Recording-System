@@ -25,14 +25,18 @@ namespace ResearchRecordingSystemInCollegeOfScience.Tabpages
             tb_vPublishYear.Text = dgvr.Cells[2].Value.ToString();
             tb_vRemarks.Text = dgvr.Cells[3].Value.ToString();
             tb_vCourse.Text = dgvr.Cells[4].Value.ToString();
-            tb_vCataloging.Text = dgvr.Cells[6].Value.ToString();
+            tb_vCataloging.Text = dgvr.Cells[5].Value.ToString();
+            tb_vCategory.Text = dgvr.Cells[6].Value.ToString();
             abstractName = dgvr.Cells[7].Value.ToString();
             approvalSheetName = dgvr.Cells[8].Value.ToString();
+
 
             using (RRSContext ctx = new RRSContext())
             {
                 int tempId = Int32.Parse(dgvr.Cells[0].Value.ToString());
                 authorBindingSource.DataSource = ctx.Authors.Where(x => x.ThesisTitleId == tempId).ToList();
+
+
             }
 
         }

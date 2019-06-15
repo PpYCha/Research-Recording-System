@@ -75,6 +75,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\201906141930414_Updaraada.cs" />
+    <Compile Include="Migrations\201906141930414_Updaraada.Designer.cs">
+      <DependentUpon>201906141930414_Updaraada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906141941142_Updaraada1.cs" />
+    <Compile Include="Migrations\201906141941142_Updaraada1.Designer.cs">
+      <DependentUpon>201906141941142_Updaraada1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tabpages\ViewReport\Book and Author.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -268,6 +276,12 @@
     <Compile Include="Tabpages\ViewReport\ViewReportForrm.Designer.cs">
       <DependentUpon>ViewReportForrm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Migrations\201906141930414_Updaraada.resx">
+      <DependentUpon>201906141930414_Updaraada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906141941142_Updaraada1.resx">
+      <DependentUpon>201906141941142_Updaraada1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tabpages\ViewReport\Book and Author.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Book and Author.cs</LastGenOutput>

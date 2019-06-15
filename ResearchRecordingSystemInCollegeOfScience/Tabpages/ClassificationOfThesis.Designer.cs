@@ -31,16 +31,16 @@
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.classifacationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.tb_Course = new System.Windows.Forms.TextBox();
             this.bt_Save = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.tb_ClassificationName = new System.Windows.Forms.TextBox();
-            this.classifacationBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.classifacationBindingSource)).BeginInit();
@@ -73,8 +73,41 @@
             this.dataGridView1.DataSource = this.classifacationBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(15, 123);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(699, 150);
             this.dataGridView1.TabIndex = 79;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ClassificationId";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ClassificationId";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "ClassificationName";
+            this.dataGridViewTextBoxColumn2.HeaderText = "ClassificationName";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "CourseId";
+            this.dataGridViewTextBoxColumn3.HeaderText = "CourseId";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Course";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Course";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Visible = false;
+            // 
+            // classifacationBindingSource
+            // 
+            this.classifacationBindingSource.DataSource = typeof(ResearchRecordingSystemInCollegeOfScience.Classifacation);
             // 
             // label1
             // 
@@ -134,38 +167,6 @@
             this.tb_ClassificationName.Name = "tb_ClassificationName";
             this.tb_ClassificationName.Size = new System.Drawing.Size(221, 20);
             this.tb_ClassificationName.TabIndex = 63;
-            // 
-            // classifacationBindingSource
-            // 
-            this.classifacationBindingSource.DataSource = typeof(ResearchRecordingSystemInCollegeOfScience.Classifacation);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ClassificationId";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ClassificationId";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "ClassificationName";
-            this.dataGridViewTextBoxColumn2.HeaderText = "ClassificationName";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "CourseId";
-            this.dataGridViewTextBoxColumn3.HeaderText = "CourseId";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Course";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Course";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Visible = false;
             // 
             // ClassificationOfThesis
             // 

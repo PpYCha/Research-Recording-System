@@ -31,16 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchThesis));
             this.dataGridViewSearch = new System.Windows.Forms.DataGridView();
-            this.thesisTitleIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.publishedYearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.remarksDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.courseNameRbDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numberOfCopiesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.catalogingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.abstractEcopyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.approvalSheetEcopyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.researchBookBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bt_Search = new System.Windows.Forms.Button();
             this.tb_Search = new System.Windows.Forms.TextBox();
             this.tb_TitleSearch = new System.Windows.Forms.TextBox();
@@ -51,6 +41,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.researchBookBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.thesisTitleIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.publishedYearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.remarksDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.courseNameRbDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.catalogingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.classificationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.abstractEcopyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.approvalSheetEcopyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.researchBookBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -69,8 +69,8 @@
             this.publishedYearDataGridViewTextBoxColumn,
             this.remarksDataGridViewTextBoxColumn,
             this.courseNameRbDataGridViewTextBoxColumn,
-            this.numberOfCopiesDataGridViewTextBoxColumn,
             this.catalogingDataGridViewTextBoxColumn,
+            this.classificationDataGridViewTextBoxColumn,
             this.abstractEcopyDataGridViewTextBoxColumn,
             this.approvalSheetEcopyDataGridViewTextBoxColumn});
             this.dataGridViewSearch.DataSource = this.researchBookBindingSource;
@@ -82,76 +82,6 @@
             this.dataGridViewSearch.TabIndex = 0;
             this.dataGridViewSearch.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridViewSearch_DataError);
             this.dataGridViewSearch.DoubleClick += new System.EventHandler(this.dataGridViewSearch_Click);
-            // 
-            // thesisTitleIdDataGridViewTextBoxColumn
-            // 
-            this.thesisTitleIdDataGridViewTextBoxColumn.DataPropertyName = "ThesisTitleId";
-            this.thesisTitleIdDataGridViewTextBoxColumn.HeaderText = "ThesisTitleId";
-            this.thesisTitleIdDataGridViewTextBoxColumn.Name = "thesisTitleIdDataGridViewTextBoxColumn";
-            this.thesisTitleIdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.thesisTitleIdDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // titleDataGridViewTextBoxColumn
-            // 
-            this.titleDataGridViewTextBoxColumn.DataPropertyName = "Title";
-            this.titleDataGridViewTextBoxColumn.HeaderText = "Title";
-            this.titleDataGridViewTextBoxColumn.Name = "titleDataGridViewTextBoxColumn";
-            this.titleDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // publishedYearDataGridViewTextBoxColumn
-            // 
-            this.publishedYearDataGridViewTextBoxColumn.DataPropertyName = "PublishedYear";
-            this.publishedYearDataGridViewTextBoxColumn.HeaderText = "PublishedYear";
-            this.publishedYearDataGridViewTextBoxColumn.Name = "publishedYearDataGridViewTextBoxColumn";
-            this.publishedYearDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // remarksDataGridViewTextBoxColumn
-            // 
-            this.remarksDataGridViewTextBoxColumn.DataPropertyName = "Remarks";
-            this.remarksDataGridViewTextBoxColumn.HeaderText = "Remarks";
-            this.remarksDataGridViewTextBoxColumn.Name = "remarksDataGridViewTextBoxColumn";
-            this.remarksDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // courseNameRbDataGridViewTextBoxColumn
-            // 
-            this.courseNameRbDataGridViewTextBoxColumn.DataPropertyName = "CourseNameRb";
-            this.courseNameRbDataGridViewTextBoxColumn.HeaderText = "CourseNameRb";
-            this.courseNameRbDataGridViewTextBoxColumn.Name = "courseNameRbDataGridViewTextBoxColumn";
-            this.courseNameRbDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // numberOfCopiesDataGridViewTextBoxColumn
-            // 
-            this.numberOfCopiesDataGridViewTextBoxColumn.DataPropertyName = "NumberOfCopies";
-            this.numberOfCopiesDataGridViewTextBoxColumn.HeaderText = "NumberOfCopies";
-            this.numberOfCopiesDataGridViewTextBoxColumn.Name = "numberOfCopiesDataGridViewTextBoxColumn";
-            this.numberOfCopiesDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // catalogingDataGridViewTextBoxColumn
-            // 
-            this.catalogingDataGridViewTextBoxColumn.DataPropertyName = "Cataloging";
-            this.catalogingDataGridViewTextBoxColumn.HeaderText = "Cataloging";
-            this.catalogingDataGridViewTextBoxColumn.Name = "catalogingDataGridViewTextBoxColumn";
-            this.catalogingDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // abstractEcopyDataGridViewTextBoxColumn
-            // 
-            this.abstractEcopyDataGridViewTextBoxColumn.DataPropertyName = "AbstractEcopy";
-            this.abstractEcopyDataGridViewTextBoxColumn.HeaderText = "AbstractEcopy";
-            this.abstractEcopyDataGridViewTextBoxColumn.Name = "abstractEcopyDataGridViewTextBoxColumn";
-            this.abstractEcopyDataGridViewTextBoxColumn.ReadOnly = true;
-            this.abstractEcopyDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // approvalSheetEcopyDataGridViewTextBoxColumn
-            // 
-            this.approvalSheetEcopyDataGridViewTextBoxColumn.DataPropertyName = "ApprovalSheetEcopy";
-            this.approvalSheetEcopyDataGridViewTextBoxColumn.HeaderText = "ApprovalSheetEcopy";
-            this.approvalSheetEcopyDataGridViewTextBoxColumn.Name = "approvalSheetEcopyDataGridViewTextBoxColumn";
-            this.approvalSheetEcopyDataGridViewTextBoxColumn.ReadOnly = true;
-            this.approvalSheetEcopyDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // researchBookBindingSource
-            // 
-            this.researchBookBindingSource.DataSource = typeof(ResearchRecordingSystemInCollegeOfScience.ResearchBook);
             // 
             // bt_Search
             // 
@@ -284,6 +214,76 @@
             this.label1.TabIndex = 58;
             this.label1.Text = "Title:";
             // 
+            // researchBookBindingSource
+            // 
+            this.researchBookBindingSource.DataSource = typeof(ResearchRecordingSystemInCollegeOfScience.ResearchBook);
+            // 
+            // thesisTitleIdDataGridViewTextBoxColumn
+            // 
+            this.thesisTitleIdDataGridViewTextBoxColumn.DataPropertyName = "ThesisTitleId";
+            this.thesisTitleIdDataGridViewTextBoxColumn.HeaderText = "ThesisTitleId";
+            this.thesisTitleIdDataGridViewTextBoxColumn.Name = "thesisTitleIdDataGridViewTextBoxColumn";
+            this.thesisTitleIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.thesisTitleIdDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // titleDataGridViewTextBoxColumn
+            // 
+            this.titleDataGridViewTextBoxColumn.DataPropertyName = "Title";
+            this.titleDataGridViewTextBoxColumn.HeaderText = "Title";
+            this.titleDataGridViewTextBoxColumn.Name = "titleDataGridViewTextBoxColumn";
+            this.titleDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // publishedYearDataGridViewTextBoxColumn
+            // 
+            this.publishedYearDataGridViewTextBoxColumn.DataPropertyName = "PublishedYear";
+            this.publishedYearDataGridViewTextBoxColumn.HeaderText = "PublishedYear";
+            this.publishedYearDataGridViewTextBoxColumn.Name = "publishedYearDataGridViewTextBoxColumn";
+            this.publishedYearDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // remarksDataGridViewTextBoxColumn
+            // 
+            this.remarksDataGridViewTextBoxColumn.DataPropertyName = "Remarks";
+            this.remarksDataGridViewTextBoxColumn.HeaderText = "Remarks";
+            this.remarksDataGridViewTextBoxColumn.Name = "remarksDataGridViewTextBoxColumn";
+            this.remarksDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // courseNameRbDataGridViewTextBoxColumn
+            // 
+            this.courseNameRbDataGridViewTextBoxColumn.DataPropertyName = "CourseNameRb";
+            this.courseNameRbDataGridViewTextBoxColumn.HeaderText = "CourseNameRb";
+            this.courseNameRbDataGridViewTextBoxColumn.Name = "courseNameRbDataGridViewTextBoxColumn";
+            this.courseNameRbDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // catalogingDataGridViewTextBoxColumn
+            // 
+            this.catalogingDataGridViewTextBoxColumn.DataPropertyName = "Cataloging";
+            this.catalogingDataGridViewTextBoxColumn.HeaderText = "Cataloging";
+            this.catalogingDataGridViewTextBoxColumn.Name = "catalogingDataGridViewTextBoxColumn";
+            this.catalogingDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // classificationDataGridViewTextBoxColumn
+            // 
+            this.classificationDataGridViewTextBoxColumn.DataPropertyName = "Classification";
+            this.classificationDataGridViewTextBoxColumn.HeaderText = "Classification";
+            this.classificationDataGridViewTextBoxColumn.Name = "classificationDataGridViewTextBoxColumn";
+            this.classificationDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // abstractEcopyDataGridViewTextBoxColumn
+            // 
+            this.abstractEcopyDataGridViewTextBoxColumn.DataPropertyName = "AbstractEcopy";
+            this.abstractEcopyDataGridViewTextBoxColumn.HeaderText = "AbstractEcopy";
+            this.abstractEcopyDataGridViewTextBoxColumn.Name = "abstractEcopyDataGridViewTextBoxColumn";
+            this.abstractEcopyDataGridViewTextBoxColumn.ReadOnly = true;
+            this.abstractEcopyDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // approvalSheetEcopyDataGridViewTextBoxColumn
+            // 
+            this.approvalSheetEcopyDataGridViewTextBoxColumn.DataPropertyName = "ApprovalSheetEcopy";
+            this.approvalSheetEcopyDataGridViewTextBoxColumn.HeaderText = "ApprovalSheetEcopy";
+            this.approvalSheetEcopyDataGridViewTextBoxColumn.Name = "approvalSheetEcopyDataGridViewTextBoxColumn";
+            this.approvalSheetEcopyDataGridViewTextBoxColumn.ReadOnly = true;
+            this.approvalSheetEcopyDataGridViewTextBoxColumn.Visible = false;
+            // 
             // SearchThesis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -333,8 +333,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn publishedYearDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn remarksDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn courseNameRbDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numberOfCopiesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn catalogingDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn classificationDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn abstractEcopyDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn approvalSheetEcopyDataGridViewTextBoxColumn;
     }

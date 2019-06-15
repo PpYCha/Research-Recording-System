@@ -143,7 +143,7 @@
             this.cb_Course.Size = new System.Drawing.Size(168, 29);
             this.cb_Course.TabIndex = 55;
             this.cb_Course.SelectedIndexChanged += new System.EventHandler(this.cb_Course_SelectedIndexChanged);
-            this.cb_Course.SelectedValueChanged += new System.EventHandler(this.cb_Course_SelectedValueChanged);
+          
             // 
             // bt_SaveCourse
             // 

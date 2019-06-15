@@ -15,11 +15,7 @@ namespace ResearchRecordingSystemInCollegeOfScience.Tabpages
 
         private void bt_AddAuthor_Click(object sender, EventArgs e)
         {
-
             AddBorrower();
-
-
-
         }
 
         private void AddBorrower()
@@ -59,10 +55,17 @@ namespace ResearchRecordingSystemInCollegeOfScience.Tabpages
                         };
                         ctx.Borrows.AddOrUpdate(borrow);
                         ctx.SaveChanges();
+
+                        tb_BFName.Clear();
+                        tb_BContactNumber.Clear();
+                        dateTimePicker_Return.Value = DateTime.Now;
+
+                        LoadBorrower();
+
                         ListofBorrowedBooks listofBorrowedBooks = new ListofBorrowedBooks();
                         listofBorrowedBooks.ShowDialog();
 
-                      
+
                     }
                 }
                 else

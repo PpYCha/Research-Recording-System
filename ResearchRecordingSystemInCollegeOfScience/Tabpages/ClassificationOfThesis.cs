@@ -35,16 +35,44 @@ namespace ResearchRecordingSystemInCollegeOfScience.Tabpages
             int tempId = Int32.Parse(dgvr.Cells[0].Value.ToString());
             using (RRSContext ctx = new RRSContext())
             {
-                var classfication = new Classifacation()
+                //if (tb_ClassificationName.Text == "")
+                //{
+
+                //var classfication = new Classifacation()
+                //{
+                //    ClassificationName = tb_ClassificationName.Text,
+                //    CourseId = tempId,
+                //};
+
+                //ctx.Classifacations.Add(classfication);
+                //ctx.SaveChanges();
+                //tb_ClassificationName.Clear();
+                //ClassificationOfThesis_Load(null, null);
+                //}
+
+
+                if (dataGridView1.SelectedRows.Count > 0)
                 {
-                    ClassificationName = tb_ClassificationName.Text,
-                    CourseId = tempId,
-                };
 
-                ctx.Classifacations.Add(classfication);
-                ctx.SaveChanges();
+                    foreach (var item in classifacationBindingSource.List)
+                    {
+                        var classifacation = (Classifacation)item;
+                        if (classifacation.ClassificationId <= 0)
+                            ctx.Classifacations.Add(classifacation);
+                        else
+                        {
+                            ctx.Classifacations.Attach(classifacation);
+                            ctx.Entry(classifacation).State = System.Data.Entity.EntityState.Modified;
+                        }
+                    }
 
-                ClassificationOfThesis_Load(null, null);
+                    ctx.SaveChanges();
+                    MessageBox.Show(this, "Update Successfull");
+
+
+                }
+
+
             }
         }
 

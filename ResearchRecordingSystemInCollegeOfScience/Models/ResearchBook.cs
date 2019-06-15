@@ -13,6 +13,9 @@ namespace ResearchRecordingSystemInCollegeOfScience
         public string AbstractEcopy { get; set; }
         public string ApprovalSheetEcopy { get; set; }
         public string Cataloging { get; set; }
+        public string Classification { get; set; }
+
+
 
         public virtual ICollection<Borrow> Borrower { get; set; }
         public virtual ICollection<Author> Authors { get; set; }

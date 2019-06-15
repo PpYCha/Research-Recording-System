@@ -136,6 +136,8 @@ namespace ResearchRecordingSystemInCollegeOfScience
                                 Cataloging = tb_Cataloging.Text,
                                 ApprovalSheetEcopy = appSheEcopy,
                                 AbstractEcopy = abstractEcopy,
+                                Classification = cb_Classfication.GetItemText(cb_Classfication.SelectedItem),
+
                             };
                             ctx.ResearchBooks.Add(thesisTitle);
                             ctx.SaveChanges();
@@ -166,11 +168,6 @@ namespace ResearchRecordingSystemInCollegeOfScience
                                 ctx.SaveChanges();
 
                             }
-
-
-
-
-
 
 
                             LoadThesis();
@@ -223,7 +220,7 @@ namespace ResearchRecordingSystemInCollegeOfScience
             cb_Classfication.SelectedIndex = -1;
             dataGridView1.Rows.Clear();
             dataGridView1.Refresh();
-
+            tb_Cataloging.Clear();
 
             ClearAuthor();
         }
@@ -239,76 +236,8 @@ namespace ResearchRecordingSystemInCollegeOfScience
 
         }
 
-        private void bt_AddAuthor_Click(object sender, EventArgs e)
-        {
-            AddAuthor();
-        }
-
-        private void AddAuthor()
-        {
-
-            try
-            {
-                using (var ctx = new RRSContext())
-                {
-                    if (!(tb_AuthorFName.Text == ""))
-                    {
-                        var author = new Author()
-                        {
-                            AuthorName = tb_AuthorFName.Text,
-                            //AuthorMName = tb_AuthorMName.Text,
-                            //AuthorLName = tb_AuthorLName.Text,
-                            AuthorContactNumber = tb_AuthorContactNumber.Text,
-                            Gender = cb_Gender.SelectedItem.ToString(),
-                            ThesisTitleId = tempId,
-                        };
-
-                        ctx.Authors.Add(author);
-                        ctx.SaveChanges();
-                        MessageBox.Show("Save Successful");
-                        ClearTextField();
-                        EnableAuthorControl();
-                    }
 
 
-                }
-
-
-
-
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-
-
-
-
-        }
-
-        private void dataGridView_Thesis_DoubleClick(object sender, EventArgs e)
-        {
-
-        }
-
-        private void EnableAuthorControl()
-        {
-
-            DialogResult result = MessageBox.Show("Add more author?", " ", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
-            {
-
-            }
-            if (result == DialogResult.No)
-            {
-                tb_Title.Enabled = true;
-                tb_Remarks.Enabled = true;
-                cb_Course.Enabled = true;
-                cb_PublishedYear.Enabled = true;
-            }
-        }
 
         private void bt_Ecopy1_Click(object sender, EventArgs e)
         {
@@ -477,15 +406,7 @@ namespace ResearchRecordingSystemInCollegeOfScience
             //}
         }
 
-        private void cb_Course_SelectedValueChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void thesisTitleBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
 
