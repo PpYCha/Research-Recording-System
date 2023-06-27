@@ -9,6 +9,7 @@ namespace ResearchRecordingSystemInCollegeOfScience.Tabpages
         public ClassificationOfThesis()
         {
             InitializeComponent();
+            dataGridView1.ClearSelection();
         }
 
         public DataGridViewRow dgvr;
@@ -35,23 +36,23 @@ namespace ResearchRecordingSystemInCollegeOfScience.Tabpages
             int tempId = Int32.Parse(dgvr.Cells[0].Value.ToString());
             using (RRSContext ctx = new RRSContext())
             {
-                //if (tb_ClassificationName.Text == "")
-                //{
+                if (!(tb_ClassificationName.Text == ""))
+                {
 
-                //var classfication = new Classifacation()
-                //{
-                //    ClassificationName = tb_ClassificationName.Text,
-                //    CourseId = tempId,
-                //};
+                    var classfication = new Classifacation()
+                    {
+                        ClassificationName = tb_ClassificationName.Text,
+                        CourseId = tempId,
+                    };
 
-                //ctx.Classifacations.Add(classfication);
-                //ctx.SaveChanges();
-                //tb_ClassificationName.Clear();
-                //ClassificationOfThesis_Load(null, null);
-                //}
+                    ctx.Classifacations.Add(classfication);
+                    ctx.SaveChanges();
+                    tb_ClassificationName.Clear();
+                    ClassificationOfThesis_Load(null, null);
+                }
 
 
-                if (dataGridView1.SelectedRows.Count > 0)
+                else /*(dataGridView1.SelectedRows.Count > 0)*/
                 {
 
                     foreach (var item in classifacationBindingSource.List)

@@ -16,5 +16,10 @@ namespace ResearchRecordingSystemInCollegeOfScience.Tabpages
         {
             InitializeComponent();
         }
+
+        private void List_of_Books_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

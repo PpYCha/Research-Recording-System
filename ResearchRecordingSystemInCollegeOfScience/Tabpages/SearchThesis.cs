@@ -84,11 +84,7 @@ namespace ResearchRecordingSystemInCollegeOfScience.Tabpages
             e.Cancel = true;
         }
 
-        private void bt_ViewEcopy_Click(object sender, EventArgs e)
-        {
-            ViewECopyForm viewECopyForm = new ViewECopyForm();
-            viewECopyForm.Show();
-        }
+
 
         private void tb_Search_TextChanged(object sender, EventArgs e)
         {
@@ -166,6 +162,16 @@ namespace ResearchRecordingSystemInCollegeOfScience.Tabpages
             using (RRSContext ctx = new RRSContext())
             {
                 researchBookBindingSource.DataSource = ctx.ResearchBooks.Where(x => x.CourseNameRb.Contains(tb_CourseSearch.Text)).ToList();
+
+
+            }
+        }
+
+        private void tb_Classification_TextChanged(object sender, EventArgs e)
+        {
+            using (RRSContext ctx = new RRSContext())
+            {
+                researchBookBindingSource.DataSource = ctx.ResearchBooks.Where(x => x.Classification.Contains(tb_Classification.Text)).ToList();
 
 
             }

@@ -31,11 +31,9 @@
             this.cb_Course = new System.Windows.Forms.ComboBox();
             this.chb_Course = new System.Windows.Forms.CheckBox();
             this.chb_YearPublish = new System.Windows.Forms.CheckBox();
-            this.chb_Author = new System.Windows.Forms.CheckBox();
             this.chb_Category = new System.Windows.Forms.CheckBox();
             this.cb_YearPublished = new System.Windows.Forms.ComboBox();
             this.cb_Classification = new System.Windows.Forms.ComboBox();
-            this.tb_AuthorName = new System.Windows.Forms.TextBox();
             this.tb_Search = new System.Windows.Forms.Button();
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.ViewByCourseRpt = new ResearchRecordingSystemInCollegeOfScience.ViewByCourseRpt();
@@ -60,36 +58,29 @@
             this.chb_Course.TabIndex = 3;
             this.chb_Course.Text = "Course:";
             this.chb_Course.UseVisualStyleBackColor = true;
+            this.chb_Course.Click += new System.EventHandler(this.chb_Course_Click);
             // 
             // chb_YearPublish
             // 
             this.chb_YearPublish.AutoSize = true;
-            this.chb_YearPublish.Location = new System.Drawing.Point(10, 76);
+            this.chb_YearPublish.Location = new System.Drawing.Point(49, 74);
             this.chb_YearPublish.Name = "chb_YearPublish";
             this.chb_YearPublish.Size = new System.Drawing.Size(126, 25);
             this.chb_YearPublish.TabIndex = 4;
             this.chb_YearPublish.Text = "Year Publish:";
             this.chb_YearPublish.UseVisualStyleBackColor = true;
-            // 
-            // chb_Author
-            // 
-            this.chb_Author.AutoSize = true;
-            this.chb_Author.Location = new System.Drawing.Point(436, 31);
-            this.chb_Author.Name = "chb_Author";
-            this.chb_Author.Size = new System.Drawing.Size(88, 25);
-            this.chb_Author.TabIndex = 5;
-            this.chb_Author.Text = "Author:";
-            this.chb_Author.UseVisualStyleBackColor = true;
+            this.chb_YearPublish.Click += new System.EventHandler(this.chb_YearPublish_Click);
             // 
             // chb_Category
             // 
             this.chb_Category.AutoSize = true;
-            this.chb_Category.Location = new System.Drawing.Point(416, 76);
+            this.chb_Category.Location = new System.Drawing.Point(413, 31);
             this.chb_Category.Name = "chb_Category";
             this.chb_Category.Size = new System.Drawing.Size(131, 25);
             this.chb_Category.TabIndex = 6;
             this.chb_Category.Text = "Classfication:";
             this.chb_Category.UseVisualStyleBackColor = true;
+            this.chb_Category.Click += new System.EventHandler(this.chb_Category_Click);
             // 
             // cb_YearPublished
             // 
@@ -105,24 +96,17 @@
             // 
             this.cb_Classification.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_Classification.FormattingEnabled = true;
-            this.cb_Classification.Location = new System.Drawing.Point(552, 74);
+            this.cb_Classification.Location = new System.Drawing.Point(549, 29);
             this.cb_Classification.Margin = new System.Windows.Forms.Padding(5);
             this.cb_Classification.Name = "cb_Classification";
             this.cb_Classification.Size = new System.Drawing.Size(199, 29);
             this.cb_Classification.TabIndex = 9;
             // 
-            // tb_AuthorName
-            // 
-            this.tb_AuthorName.Location = new System.Drawing.Point(552, 27);
-            this.tb_AuthorName.Name = "tb_AuthorName";
-            this.tb_AuthorName.Size = new System.Drawing.Size(199, 27);
-            this.tb_AuthorName.TabIndex = 10;
-            // 
             // tb_Search
             // 
-            this.tb_Search.Location = new System.Drawing.Point(800, 50);
+            this.tb_Search.Location = new System.Drawing.Point(549, 64);
             this.tb_Search.Name = "tb_Search";
-            this.tb_Search.Size = new System.Drawing.Size(109, 51);
+            this.tb_Search.Size = new System.Drawing.Size(188, 51);
             this.tb_Search.TabIndex = 11;
             this.tb_Search.Text = "Search";
             this.tb_Search.UseVisualStyleBackColor = true;
@@ -151,11 +135,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1031, 452);
             this.Controls.Add(this.tb_Search);
-            this.Controls.Add(this.tb_AuthorName);
             this.Controls.Add(this.cb_Classification);
             this.Controls.Add(this.cb_YearPublished);
             this.Controls.Add(this.chb_Category);
-            this.Controls.Add(this.chb_Author);
             this.Controls.Add(this.chb_YearPublish);
             this.Controls.Add(this.chb_Course);
             this.Controls.Add(this.cb_Course);
@@ -178,11 +160,9 @@
         private System.Windows.Forms.ComboBox cb_Course;
         private System.Windows.Forms.CheckBox chb_Course;
         private System.Windows.Forms.CheckBox chb_YearPublish;
-        private System.Windows.Forms.CheckBox chb_Author;
         private System.Windows.Forms.CheckBox chb_Category;
         private System.Windows.Forms.ComboBox cb_YearPublished;
         private System.Windows.Forms.ComboBox cb_Classification;
-        private System.Windows.Forms.TextBox tb_AuthorName;
         private System.Windows.Forms.Button tb_Search;
         private ViewByCourseRpt ViewByCourseRpt;
     }

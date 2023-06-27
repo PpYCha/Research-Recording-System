@@ -1,4 +1,5 @@
-﻿using ResearchRecordingSystemInCollegeOfScience.Tabpages;
+﻿using ResearchRecordingSystemInCollegeOfScience.Properties;
+using ResearchRecordingSystemInCollegeOfScience.Tabpages;
 using ResearchRecordingSystemInCollegeOfScience.Tabpages.ViewReport;
 using System;
 using System.Windows.Forms;
@@ -16,21 +17,21 @@ namespace ResearchRecordingSystemInCollegeOfScience
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //LoginForm loginForm = new LoginForm();
-            //loginForm.ShowDialog();
+            LoginForm loginForm = new LoginForm();
+            loginForm.ShowDialog();
 
-            //if (loginForm.DialogResult == DialogResult.OK)
-            //{
-            //    bt_ManageAccount.Visible = false;
-            //    bt_CourseManagement.Visible = false;
-            //    bt_ManageThesis.Visible = false;
-            //    button1.Visible = false;
-            //}
-            //else if (loginForm.LoginAsClerk == true)
-            //{
-            //    bt_ManageAccount.Visible = false;
-            //    bt_CourseManagement.Visible = false;
-            //}
+            if (loginForm.DialogResult == DialogResult.OK)
+            {
+                manageAccountToolStripMenuItem1.Visible = false;
+                manageCourseToolStripMenuItem.Visible = false;
+                manageBookToolStripMenuItem.Visible = false;
+                //button1.Visible = false;
+            }
+            else if (loginForm.LoginAsClerk == true)
+            {
+                manageAccountToolStripMenuItem1.Visible = false;
+                manageCourseToolStripMenuItem.Visible = false;
+            }
         }
 
 
@@ -115,14 +116,22 @@ namespace ResearchRecordingSystemInCollegeOfScience
 
         private void borrowedBooksToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ListofBorrowedBooks listofBorrowedBooks = new ListofBorrowedBooks();
-            listofBorrowedBooks.ShowDialog();
+            //    ListofBorrowedBooks listofBorrowedBooks = new ListofBorrowedBooks();
+            //    listofBorrowedBooks.ShowDialog();
+            ViewListOfBorrowedBooks viewListOfBorrowedBooks = new ViewListOfBorrowedBooks();
+            viewListOfBorrowedBooks.ShowDialog();
         }
 
         private void listByCourseToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ViewByCourse viewByCourse = new ViewByCourse();
             viewByCourse.ShowDialog();
+        }
+
+        private void byAuthrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ViewByAuthor viewByAuthor = new ViewByAuthor();
+            viewByAuthor.ShowDialog();
         }
     }
 }

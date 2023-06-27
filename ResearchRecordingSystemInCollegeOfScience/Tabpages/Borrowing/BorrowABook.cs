@@ -1,5 +1,4 @@
-﻿using ResearchRecordingSystemInCollegeOfScience.Tabpages.Borrowing;
-using System;
+﻿using System;
 using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Windows.Forms;
@@ -31,40 +30,47 @@ namespace ResearchRecordingSystemInCollegeOfScience.Tabpages
 
                         int tempId = Int32.Parse(dataGridView_Borrow.SelectedRows[0].Cells[0].Value.ToString());
 
-
                         var categoryid = (from cats in ctx.ResearchBooks
                                           where cats.ThesisTitleId.Equals(tempId)
                                           select cats.NumberOfCopies).SingleOrDefault();
-
-                        var bookBorrowed = categoryid - 1;
-
-                        var rb = new ResearchBook() { ThesisTitleId = tempId, NumberOfCopies = bookBorrowed };
-                        ctx.ResearchBooks.Attach(rb);
-                        ctx.Entry(rb).Property(x => x.NumberOfCopies).IsModified = true;
-                        ctx.SaveChanges();
-
-
-                        var borrow = new Borrow
+                        if (categoryid == 0)
                         {
-                            BFullName = tb_BFName.Text,
-                            BContactNumber = tb_BContactNumber.Text,
-                            BookBorrowedDate = DateTime.Now,
-                            DateWillRetrun = dateTimePicker_Return.Value.Date,
-                            ThesisTitleId = tempId,
-                            NoOfBookBorrowed = 1,
-                        };
-                        ctx.Borrows.AddOrUpdate(borrow);
-                        ctx.SaveChanges();
+                            MessageBox.Show("No books available");
+                        }
+                        else
+                        {
 
-                        tb_BFName.Clear();
-                        tb_BContactNumber.Clear();
-                        dateTimePicker_Return.Value = DateTime.Now;
 
-                        LoadBorrower();
+                            var bookBorrowed = categoryid - 1;
 
-                        ListofBorrowedBooks listofBorrowedBooks = new ListofBorrowedBooks();
-                        listofBorrowedBooks.ShowDialog();
+                            var rb = new ResearchBook() { ThesisTitleId = tempId, NumberOfCopies = bookBorrowed };
+                            ctx.ResearchBooks.Attach(rb);
+                            ctx.Entry(rb).Property(x => x.NumberOfCopies).IsModified = true;
+                            ctx.SaveChanges();
 
+
+                            var borrow = new Borrow
+                            {
+                                BFullName = tb_BFName.Text,
+                                BContactNumber = tb_BContactNumber.Text,
+                                BookBorrowedDate = DateTime.Now,
+                                DateWillRetrun = dateTimePicker_Return.Value.Date,
+                                ThesisTitleId = tempId,
+                                NoOfBookBorrowed = 1,
+                            };
+                            ctx.Borrows.AddOrUpdate(borrow);
+                            ctx.SaveChanges();
+
+                            tb_BFName.Clear();
+                            tb_BContactNumber.Clear();
+                            dateTimePicker_Return.Value = DateTime.Now;
+
+                            LoadBorrower();
+
+                            ListofBorrowedBooks listofBorrowedBooks = new ListofBorrowedBooks();
+                            listofBorrowedBooks.ShowDialog();
+
+                        }
 
                     }
                 }
@@ -129,8 +135,8 @@ namespace ResearchRecordingSystemInCollegeOfScience.Tabpages
 
         private void dataGridView_Borrow_DoubleClick(object sender, EventArgs e)
         {
-            ViewBorrowBook viewBookInformation = new ViewBorrowBook();
-            viewBookInformation.dgvr1 = dataGridView_Borrow.SelectedRows[0];
+            ViewBookInformation viewBookInformation = new ViewBookInformation();
+            viewBookInformation.dgvr = dataGridView_Borrow.SelectedRows[0];
             viewBookInformation.Show();
         }
 
@@ -162,6 +168,21 @@ namespace ResearchRecordingSystemInCollegeOfScience.Tabpages
             }
         }
 
+        private void tb_BContactNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            isNumeric(sender, e);
+        }
 
+        public void isNumeric(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

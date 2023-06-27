@@ -43,8 +43,6 @@
             this.tb_FirstName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView_User = new System.Windows.Forms.DataGridView();
-            this.bt_SaveUser = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.middleNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,9 +51,11 @@
             this.userRoleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isActiveDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.userAccountBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bt_SaveUser = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_User)).BeginInit();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userAccountBindingSource)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label7
@@ -236,46 +236,6 @@
             this.dataGridView_User.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView_User_CellFormatting);
             this.dataGridView_User.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dataGridView_User_EditingControlShowing);
             // 
-            // bt_SaveUser
-            // 
-            this.bt_SaveUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_SaveUser.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_SaveUser.ForeColor = System.Drawing.Color.White;
-            this.bt_SaveUser.Image = ((System.Drawing.Image)(resources.GetObject("bt_SaveUser.Image")));
-            this.bt_SaveUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_SaveUser.Location = new System.Drawing.Point(246, 294);
-            this.bt_SaveUser.Name = "bt_SaveUser";
-            this.bt_SaveUser.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.bt_SaveUser.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bt_SaveUser.Size = new System.Drawing.Size(182, 47);
-            this.bt_SaveUser.TabIndex = 51;
-            this.bt_SaveUser.Text = "Save";
-            this.bt_SaveUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.bt_SaveUser.UseVisualStyleBackColor = true;
-            this.bt_SaveUser.Click += new System.EventHandler(this.bt_SaveUser_Click);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.tb_FirstName);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.tb_MiddleName);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.tb_UserPassword);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.tb_LastName);
-            this.groupBox1.Controls.Add(this.cb_Role);
-            this.groupBox1.Controls.Add(this.tb_UserName);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(24, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(404, 258);
-            this.groupBox1.TabIndex = 54;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "User Details";
-            // 
             // firstNameDataGridViewTextBoxColumn
             // 
             this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
@@ -322,6 +282,46 @@
             // 
             this.userAccountBindingSource.DataSource = typeof(ResearchRecordingSystemInCollegeOfScience.UserAccount);
             // 
+            // bt_SaveUser
+            // 
+            this.bt_SaveUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_SaveUser.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_SaveUser.ForeColor = System.Drawing.Color.White;
+            this.bt_SaveUser.Image = ((System.Drawing.Image)(resources.GetObject("bt_SaveUser.Image")));
+            this.bt_SaveUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bt_SaveUser.Location = new System.Drawing.Point(246, 294);
+            this.bt_SaveUser.Name = "bt_SaveUser";
+            this.bt_SaveUser.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.bt_SaveUser.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bt_SaveUser.Size = new System.Drawing.Size(182, 47);
+            this.bt_SaveUser.TabIndex = 51;
+            this.bt_SaveUser.Text = "Save";
+            this.bt_SaveUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.bt_SaveUser.UseVisualStyleBackColor = true;
+            this.bt_SaveUser.Click += new System.EventHandler(this.bt_SaveUser_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.tb_FirstName);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.tb_MiddleName);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.tb_UserPassword);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.tb_LastName);
+            this.groupBox1.Controls.Add(this.cb_Role);
+            this.groupBox1.Controls.Add(this.tb_UserName);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(24, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(404, 258);
+            this.groupBox1.TabIndex = 54;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "User Details";
+            // 
             // AccountManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -335,11 +335,11 @@
             this.Name = "AccountManagerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AccountManagerForm";
-            
+            this.Load += new System.EventHandler(this.AccountManagerForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_User)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userAccountBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.userAccountBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

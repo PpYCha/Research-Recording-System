@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ResearchRecordingSystemInCollegeOfScience.Tabpages;
+using System;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
@@ -10,6 +11,7 @@ namespace ResearchRecordingSystemInCollegeOfScience
         private int? tempId;
         public string appSheEcopy;
         public string abstractEcopy;
+        public DataGridViewRow dgvrAuthor;
 
         public ThesisManagerForm()
         {
@@ -29,6 +31,18 @@ namespace ResearchRecordingSystemInCollegeOfScience
             //DisablAuthorControl();
 
             cb_Course.SelectedIndex = -1;
+
+            try
+            {
+
+
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         private void DisablAuthorControl()
@@ -134,11 +148,13 @@ namespace ResearchRecordingSystemInCollegeOfScience
                                 CourseNameRb = cb_Course.GetItemText(cb_Course.SelectedItem),
                                 NumberOfCopies = Int32.Parse(tb_NumberOfCopies.Text),
                                 Cataloging = tb_Cataloging.Text,
-                                ApprovalSheetEcopy = appSheEcopy,
-                                AbstractEcopy = abstractEcopy,
+                                AbstractEcopy = label14.Text,
+                                ApprovalSheetEcopy = label15.Text,
                                 Classification = cb_Classfication.GetItemText(cb_Classfication.SelectedItem),
 
                             };
+
+
                             ctx.ResearchBooks.Add(thesisTitle);
                             ctx.SaveChanges();
 
@@ -221,7 +237,8 @@ namespace ResearchRecordingSystemInCollegeOfScience
             dataGridView1.Rows.Clear();
             dataGridView1.Refresh();
             tb_Cataloging.Clear();
-
+            label15.Text = "";
+            label14.Text = "";
             ClearAuthor();
         }
 
@@ -253,9 +270,9 @@ namespace ResearchRecordingSystemInCollegeOfScience
 
                 try
                 {
-                    abstractEcopy = opd.SafeFileName;
+                    label14.Text = opd.SafeFileName;
                     File.Copy(opd.FileName, Application.StartupPath + "\\E-copy\\Abstract\\" + "\\" + opd.SafeFileName);
-                    MessageBox.Show("Added Abstract Successfully");
+                    //MessageBox.Show("Added Abstract Successfully");
                 }
                 catch (Exception)
                 {
@@ -286,9 +303,9 @@ namespace ResearchRecordingSystemInCollegeOfScience
 
                 try
                 {
-                    appSheEcopy = opd.SafeFileName;
+                    label15.Text = opd.SafeFileName;
                     File.Copy(opd.FileName, Application.StartupPath + "\\E-copy\\Approval Sheet\\" + "\\" + opd.SafeFileName);
-                    MessageBox.Show("Added Approval Sheet Successfully");
+                    //MessageBox.Show("Added Approval Sheet Successfully");
                 }
                 catch (Exception)
                 {
@@ -353,7 +370,7 @@ namespace ResearchRecordingSystemInCollegeOfScience
             {
 
 
-                if (cb_Course.SelectedIndex == 0)
+                if (cb_Course.SelectedIndex == -1)
                 {
 
                 }
@@ -406,7 +423,38 @@ namespace ResearchRecordingSystemInCollegeOfScience
             //}
         }
 
+        private void tb_AuthorContactNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            isNumeric(sender, e);
+        }
 
+        public void isNumeric(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tb_NumberOfCopies_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            isNumeric(sender, e);
+        }
+
+        private void btn_AuthorSearchAdd_Click(object sender, EventArgs e)
+        {
+            SearchAuthor searchAuthor = new SearchAuthor();
+            searchAuthor.ShowDialog();
+        }
+
+        private void tb_Search_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

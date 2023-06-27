@@ -41,6 +41,7 @@
             this.listByCourseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.booksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.borrowedBooksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.byAuthrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -113,9 +114,10 @@
             // reportToolStripMenuItem
             // 
             this.reportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.listByCourseToolStripMenuItem,
             this.booksToolStripMenuItem,
-            this.borrowedBooksToolStripMenuItem});
+            this.borrowedBooksToolStripMenuItem,
+            this.listByCourseToolStripMenuItem,
+            this.byAuthrosToolStripMenuItem});
             this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
             this.reportToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.reportToolStripMenuItem.Text = "Report";
@@ -140,6 +142,13 @@
             this.borrowedBooksToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.borrowedBooksToolStripMenuItem.Text = "Borrowed Books";
             this.borrowedBooksToolStripMenuItem.Click += new System.EventHandler(this.borrowedBooksToolStripMenuItem_Click);
+            // 
+            // byAuthrosToolStripMenuItem
+            // 
+            this.byAuthrosToolStripMenuItem.Name = "byAuthrosToolStripMenuItem";
+            this.byAuthrosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.byAuthrosToolStripMenuItem.Text = "By Authros";
+            this.byAuthrosToolStripMenuItem.Click += new System.EventHandler(this.byAuthrosToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -176,6 +185,7 @@
         private System.Windows.Forms.ToolStripMenuItem listByCourseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem booksToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem borrowedBooksToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem byAuthrosToolStripMenuItem;
     }
 }
 

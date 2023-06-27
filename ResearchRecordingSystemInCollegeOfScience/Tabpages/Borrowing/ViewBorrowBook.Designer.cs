@@ -1,6 +1,6 @@
 ﻿namespace ResearchRecordingSystemInCollegeOfScience.Tabpages.Borrowing
 {
-    partial class ViewBorrowBook
+    partial class ViewBorrowBookInformation
     {
         /// <summary>
         /// Required designer variable.

@@ -32,13 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReturnABorrowedBook));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.bt_AddAuthor = new System.Windows.Forms.Button();
-            this.borrowerIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bFullNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bContactNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookBorrowedDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateWillRetrunDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.thesisTitleIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.researchBookDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.borrowBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.borrowBindingSource)).BeginInit();
@@ -46,24 +39,15 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.borrowerIdDataGridViewTextBoxColumn,
-            this.bFullNameDataGridViewTextBoxColumn,
-            this.bContactNumberDataGridViewTextBoxColumn,
-            this.bookBorrowedDateDataGridViewTextBoxColumn,
-            this.dateWillRetrunDataGridViewTextBoxColumn,
-            this.thesisTitleIdDataGridViewTextBoxColumn,
-            this.researchBookDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.borrowBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(65, 35);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(812, 260);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError);
             // 
             // bt_AddAuthor
             // 
@@ -83,58 +67,6 @@
             this.bt_AddAuthor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.bt_AddAuthor.UseVisualStyleBackColor = true;
             this.bt_AddAuthor.Click += new System.EventHandler(this.bt_AddAuthor_Click);
-            // 
-            // borrowerIdDataGridViewTextBoxColumn
-            // 
-            this.borrowerIdDataGridViewTextBoxColumn.DataPropertyName = "BorrowerId";
-            this.borrowerIdDataGridViewTextBoxColumn.HeaderText = "BorrowerId";
-            this.borrowerIdDataGridViewTextBoxColumn.Name = "borrowerIdDataGridViewTextBoxColumn";
-            this.borrowerIdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.borrowerIdDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // bFullNameDataGridViewTextBoxColumn
-            // 
-            this.bFullNameDataGridViewTextBoxColumn.DataPropertyName = "BFullName";
-            this.bFullNameDataGridViewTextBoxColumn.HeaderText = "Borrower";
-            this.bFullNameDataGridViewTextBoxColumn.Name = "bFullNameDataGridViewTextBoxColumn";
-            this.bFullNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // bContactNumberDataGridViewTextBoxColumn
-            // 
-            this.bContactNumberDataGridViewTextBoxColumn.DataPropertyName = "BContactNumber";
-            this.bContactNumberDataGridViewTextBoxColumn.HeaderText = "Contact No";
-            this.bContactNumberDataGridViewTextBoxColumn.Name = "bContactNumberDataGridViewTextBoxColumn";
-            this.bContactNumberDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // bookBorrowedDateDataGridViewTextBoxColumn
-            // 
-            this.bookBorrowedDateDataGridViewTextBoxColumn.DataPropertyName = "BookBorrowedDate";
-            this.bookBorrowedDateDataGridViewTextBoxColumn.HeaderText = "Date Borrowed";
-            this.bookBorrowedDateDataGridViewTextBoxColumn.Name = "bookBorrowedDateDataGridViewTextBoxColumn";
-            this.bookBorrowedDateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dateWillRetrunDataGridViewTextBoxColumn
-            // 
-            this.dateWillRetrunDataGridViewTextBoxColumn.DataPropertyName = "DateWillRetrun";
-            this.dateWillRetrunDataGridViewTextBoxColumn.HeaderText = "Date Will Retrun";
-            this.dateWillRetrunDataGridViewTextBoxColumn.Name = "dateWillRetrunDataGridViewTextBoxColumn";
-            this.dateWillRetrunDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // thesisTitleIdDataGridViewTextBoxColumn
-            // 
-            this.thesisTitleIdDataGridViewTextBoxColumn.DataPropertyName = "ThesisTitleId";
-            this.thesisTitleIdDataGridViewTextBoxColumn.HeaderText = "ThesisTitleId";
-            this.thesisTitleIdDataGridViewTextBoxColumn.Name = "thesisTitleIdDataGridViewTextBoxColumn";
-            this.thesisTitleIdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.thesisTitleIdDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // researchBookDataGridViewTextBoxColumn
-            // 
-            this.researchBookDataGridViewTextBoxColumn.DataPropertyName = "ResearchBook";
-            this.researchBookDataGridViewTextBoxColumn.HeaderText = "ResearchBook";
-            this.researchBookDataGridViewTextBoxColumn.Name = "researchBookDataGridViewTextBoxColumn";
-            this.researchBookDataGridViewTextBoxColumn.ReadOnly = true;
-            this.researchBookDataGridViewTextBoxColumn.Visible = false;
             // 
             // borrowBindingSource
             // 
@@ -162,13 +94,6 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button bt_AddAuthor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn borrowerIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bFullNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bContactNumberDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bookBorrowedDateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateWillRetrunDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn thesisTitleIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn researchBookDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource borrowBindingSource;
     }
 }

@@ -33,12 +33,13 @@
             this.tb_Course = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView_Course = new System.Windows.Forms.DataGridView();
-            this.bt_SaveCourse = new System.Windows.Forms.Button();
-            this.courseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.courseIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.courseNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isActiveDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.classifacationsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.courseBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bt_SaveCourse = new System.Windows.Forms.Button();
+            this.btn_DeleteCourse = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Course)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -88,29 +89,6 @@
             this.dataGridView_Course.TabIndex = 43;
             this.dataGridView_Course.DoubleClick += new System.EventHandler(this.dataGridView_Course_DoubleClick);
             // 
-            // bt_SaveCourse
-            // 
-            this.bt_SaveCourse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.bt_SaveCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_SaveCourse.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_SaveCourse.ForeColor = System.Drawing.Color.White;
-            this.bt_SaveCourse.Image = ((System.Drawing.Image)(resources.GetObject("bt_SaveCourse.Image")));
-            this.bt_SaveCourse.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_SaveCourse.Location = new System.Drawing.Point(806, 339);
-            this.bt_SaveCourse.Name = "bt_SaveCourse";
-            this.bt_SaveCourse.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.bt_SaveCourse.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bt_SaveCourse.Size = new System.Drawing.Size(182, 47);
-            this.bt_SaveCourse.TabIndex = 54;
-            this.bt_SaveCourse.Text = "Save";
-            this.bt_SaveCourse.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.bt_SaveCourse.UseVisualStyleBackColor = true;
-            this.bt_SaveCourse.Click += new System.EventHandler(this.bt_SaveCourse_Click);
-            // 
-            // courseBindingSource
-            // 
-            this.courseBindingSource.DataSource = typeof(ResearchRecordingSystemInCollegeOfScience.Course);
-            // 
             // courseIdDataGridViewTextBoxColumn
             // 
             this.courseIdDataGridViewTextBoxColumn.DataPropertyName = "CourseId";
@@ -138,12 +116,52 @@
             this.classifacationsDataGridViewTextBoxColumn.Name = "classifacationsDataGridViewTextBoxColumn";
             this.classifacationsDataGridViewTextBoxColumn.Visible = false;
             // 
+            // courseBindingSource
+            // 
+            this.courseBindingSource.DataSource = typeof(ResearchRecordingSystemInCollegeOfScience.Course);
+            // 
+            // bt_SaveCourse
+            // 
+            this.bt_SaveCourse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.bt_SaveCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_SaveCourse.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_SaveCourse.ForeColor = System.Drawing.Color.White;
+            this.bt_SaveCourse.Image = ((System.Drawing.Image)(resources.GetObject("bt_SaveCourse.Image")));
+            this.bt_SaveCourse.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bt_SaveCourse.Location = new System.Drawing.Point(806, 339);
+            this.bt_SaveCourse.Name = "bt_SaveCourse";
+            this.bt_SaveCourse.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.bt_SaveCourse.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bt_SaveCourse.Size = new System.Drawing.Size(182, 47);
+            this.bt_SaveCourse.TabIndex = 54;
+            this.bt_SaveCourse.Text = "Save";
+            this.bt_SaveCourse.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.bt_SaveCourse.UseVisualStyleBackColor = true;
+            this.bt_SaveCourse.Click += new System.EventHandler(this.bt_SaveCourse_Click);
+            // 
+            // btn_DeleteCourse
+            // 
+            this.btn_DeleteCourse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_DeleteCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_DeleteCourse.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DeleteCourse.ForeColor = System.Drawing.Color.White;
+            this.btn_DeleteCourse.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_DeleteCourse.Location = new System.Drawing.Point(595, 339);
+            this.btn_DeleteCourse.Name = "btn_DeleteCourse";
+            this.btn_DeleteCourse.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btn_DeleteCourse.Size = new System.Drawing.Size(182, 47);
+            this.btn_DeleteCourse.TabIndex = 55;
+            this.btn_DeleteCourse.Text = "Delete";
+            this.btn_DeleteCourse.UseVisualStyleBackColor = true;
+            this.btn_DeleteCourse.Click += new System.EventHandler(this.bt_DeleteCourse_Click);
+            // 
             // CourseManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.ClientSize = new System.Drawing.Size(1008, 406);
+            this.Controls.Add(this.btn_DeleteCourse);
             this.Controls.Add(this.bt_SaveCourse);
             this.Controls.Add(this.dataGridView_Course);
             this.Controls.Add(this.tb_Course);
@@ -171,5 +189,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn courseNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn isActiveDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn classifacationsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btn_DeleteCourse;
     }
 }

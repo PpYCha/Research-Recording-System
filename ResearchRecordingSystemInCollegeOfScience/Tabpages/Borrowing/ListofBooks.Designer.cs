@@ -94,6 +94,7 @@
             this.Name = "List_of_Books";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "List_of_Books";
+            this.Load += new System.EventHandler(this.List_of_Books_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

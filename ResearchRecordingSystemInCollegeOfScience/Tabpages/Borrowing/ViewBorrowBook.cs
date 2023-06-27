@@ -5,9 +5,9 @@ using System.Windows.Forms;
 
 namespace ResearchRecordingSystemInCollegeOfScience.Tabpages.Borrowing
 {
-    public partial class ViewBorrowBook : Form
+    public partial class ViewBorrowBookInformation : Form
     {
-        public ViewBorrowBook()
+        public ViewBorrowBookInformation()
         {
             InitializeComponent();
         }

@@ -128,5 +128,29 @@ namespace ResearchRecordingSystemInCollegeOfScience
             classificationOfThesis.dgvr = dataGridView_Course.SelectedRows[0];
             classificationOfThesis.ShowDialog();
         }
+
+        //private void btn_DeleteCourse_Click(object sender, EventArgs e)
+        //{
+        //    //try
+        //    //{
+        //    //    if (this.dataGridView_Course.SelectedRows.Count > 0)
+        //    //    {
+        //    //        dataGridView_Course.Rows.RemoveAt(this.dataGridView_Course.SelectedRows[0].Index);
+        //    //    }
+        //    //}
+        //    //catch (Exception)
+        //    //{
+
+        //    //    throw;
+        //    //}
+        //    if (dataGridView_Course.SelectedRows.Count > 0)
+        //    {
+        //        foreach (DataGridViewRow row in dataGridView_Course.SelectedRows)
+        //        {
+        //            DeleteCourse(row.DataBoundItem);
+        //            courseBindingSource.Remove(row.DataBoundItem);
+        //        }
+        //    }
+        //}
     }
 }

@@ -199,5 +199,7 @@ namespace ResearchRecordingSystemInCollegeOfScience
                 e.Value = new String('*', e.Value.ToString().Length);
             }
         }
+
+        
     }
 }

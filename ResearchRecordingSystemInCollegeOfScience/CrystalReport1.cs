@@ -16,14 +16,14 @@ namespace ResearchRecordingSystemInCollegeOfScience {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class ViewByCourseRpt : ReportClass {
+    public class CrystalReport1 : ReportClass {
         
-        public ViewByCourseRpt() {
+        public CrystalReport1() {
         }
         
         public override string ResourceName {
             get {
-                return "ViewByCourseRpt.rpt";
+                return "CrystalReport1.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace ResearchRecordingSystemInCollegeOfScience {
         
         public override string FullResourceName {
             get {
-                return "ResearchRecordingSystemInCollegeOfScience.ViewByCourseRpt.rpt";
+                return "ResearchRecordingSystemInCollegeOfScience.CrystalReport1.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace ResearchRecordingSystemInCollegeOfScience {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedViewByCourseRpt : Component, ICachedReport {
+    public class CachedCrystalReport1 : Component, ICachedReport {
         
-        public CachedViewByCourseRpt() {
+        public CachedCrystalReport1() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace ResearchRecordingSystemInCollegeOfScience {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            ViewByCourseRpt rpt = new ViewByCourseRpt();
+            CrystalReport1 rpt = new CrystalReport1();
             rpt.Site = this.Site;
             return rpt;
         }

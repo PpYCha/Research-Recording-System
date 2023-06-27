@@ -41,6 +41,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tb_Classification = new System.Windows.Forms.TextBox();
             this.researchBookBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.thesisTitleIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,6 +53,7 @@
             this.classificationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.abstractEcopyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.approvalSheetEcopyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NumberOfCopies = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.researchBookBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -72,13 +75,14 @@
             this.catalogingDataGridViewTextBoxColumn,
             this.classificationDataGridViewTextBoxColumn,
             this.abstractEcopyDataGridViewTextBoxColumn,
-            this.approvalSheetEcopyDataGridViewTextBoxColumn});
+            this.approvalSheetEcopyDataGridViewTextBoxColumn,
+            this.NumberOfCopies});
             this.dataGridViewSearch.DataSource = this.researchBookBindingSource;
             this.dataGridViewSearch.Location = new System.Drawing.Point(12, 96);
             this.dataGridViewSearch.Name = "dataGridViewSearch";
             this.dataGridViewSearch.ReadOnly = true;
             this.dataGridViewSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewSearch.Size = new System.Drawing.Size(981, 316);
+            this.dataGridViewSearch.Size = new System.Drawing.Size(1179, 316);
             this.dataGridViewSearch.TabIndex = 0;
             this.dataGridViewSearch.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridViewSearch_DataError);
             this.dataGridViewSearch.DoubleClick += new System.EventHandler(this.dataGridViewSearch_Click);
@@ -121,7 +125,7 @@
             this.tb_TitleSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_TitleSearch.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_TitleSearch.ForeColor = System.Drawing.Color.DimGray;
-            this.tb_TitleSearch.Location = new System.Drawing.Point(61, 464);
+            this.tb_TitleSearch.Location = new System.Drawing.Point(31, 461);
             this.tb_TitleSearch.Multiline = true;
             this.tb_TitleSearch.Name = "tb_TitleSearch";
             this.tb_TitleSearch.Size = new System.Drawing.Size(221, 20);
@@ -135,7 +139,7 @@
             this.tb_PublishYearSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_PublishYearSearch.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_PublishYearSearch.ForeColor = System.Drawing.Color.DimGray;
-            this.tb_PublishYearSearch.Location = new System.Drawing.Point(298, 464);
+            this.tb_PublishYearSearch.Location = new System.Drawing.Point(268, 461);
             this.tb_PublishYearSearch.Multiline = true;
             this.tb_PublishYearSearch.Name = "tb_PublishYearSearch";
             this.tb_PublishYearSearch.Size = new System.Drawing.Size(221, 20);
@@ -149,7 +153,7 @@
             this.tb_RemarksSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_RemarksSearch.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_RemarksSearch.ForeColor = System.Drawing.Color.DimGray;
-            this.tb_RemarksSearch.Location = new System.Drawing.Point(529, 464);
+            this.tb_RemarksSearch.Location = new System.Drawing.Point(499, 461);
             this.tb_RemarksSearch.Multiline = true;
             this.tb_RemarksSearch.Name = "tb_RemarksSearch";
             this.tb_RemarksSearch.Size = new System.Drawing.Size(221, 20);
@@ -163,7 +167,7 @@
             this.tb_CourseSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_CourseSearch.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_CourseSearch.ForeColor = System.Drawing.Color.DimGray;
-            this.tb_CourseSearch.Location = new System.Drawing.Point(765, 464);
+            this.tb_CourseSearch.Location = new System.Drawing.Point(735, 461);
             this.tb_CourseSearch.Multiline = true;
             this.tb_CourseSearch.Name = "tb_CourseSearch";
             this.tb_CourseSearch.Size = new System.Drawing.Size(221, 20);
@@ -175,7 +179,7 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(761, 429);
+            this.label4.Location = new System.Drawing.Point(731, 426);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 21);
             this.label4.TabIndex = 61;
@@ -186,7 +190,7 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(525, 429);
+            this.label3.Location = new System.Drawing.Point(495, 426);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 21);
             this.label3.TabIndex = 60;
@@ -197,7 +201,7 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(294, 429);
+            this.label2.Location = new System.Drawing.Point(264, 426);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(107, 21);
             this.label2.TabIndex = 59;
@@ -208,11 +212,36 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(57, 429);
+            this.label1.Location = new System.Drawing.Point(27, 426);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 21);
             this.label1.TabIndex = 58;
             this.label1.Text = "Title:";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(961, 426);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(115, 21);
+            this.label5.TabIndex = 63;
+            this.label5.Text = "Classification:";
+            // 
+            // tb_Classification
+            // 
+            this.tb_Classification.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.tb_Classification.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.tb_Classification.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_Classification.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Classification.ForeColor = System.Drawing.Color.DimGray;
+            this.tb_Classification.Location = new System.Drawing.Point(965, 461);
+            this.tb_Classification.Multiline = true;
+            this.tb_Classification.Name = "tb_Classification";
+            this.tb_Classification.Size = new System.Drawing.Size(221, 20);
+            this.tb_Classification.TabIndex = 62;
+            this.tb_Classification.TextChanged += new System.EventHandler(this.tb_Classification_TextChanged);
             // 
             // researchBookBindingSource
             // 
@@ -236,7 +265,7 @@
             // publishedYearDataGridViewTextBoxColumn
             // 
             this.publishedYearDataGridViewTextBoxColumn.DataPropertyName = "PublishedYear";
-            this.publishedYearDataGridViewTextBoxColumn.HeaderText = "PublishedYear";
+            this.publishedYearDataGridViewTextBoxColumn.HeaderText = "Published Year";
             this.publishedYearDataGridViewTextBoxColumn.Name = "publishedYearDataGridViewTextBoxColumn";
             this.publishedYearDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -250,7 +279,7 @@
             // courseNameRbDataGridViewTextBoxColumn
             // 
             this.courseNameRbDataGridViewTextBoxColumn.DataPropertyName = "CourseNameRb";
-            this.courseNameRbDataGridViewTextBoxColumn.HeaderText = "CourseNameRb";
+            this.courseNameRbDataGridViewTextBoxColumn.HeaderText = "Course";
             this.courseNameRbDataGridViewTextBoxColumn.Name = "courseNameRbDataGridViewTextBoxColumn";
             this.courseNameRbDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -284,12 +313,21 @@
             this.approvalSheetEcopyDataGridViewTextBoxColumn.ReadOnly = true;
             this.approvalSheetEcopyDataGridViewTextBoxColumn.Visible = false;
             // 
+            // NumberOfCopies
+            // 
+            this.NumberOfCopies.DataPropertyName = "NumberOfCopies";
+            this.NumberOfCopies.HeaderText = "No Of Copies";
+            this.NumberOfCopies.Name = "NumberOfCopies";
+            this.NumberOfCopies.ReadOnly = true;
+            // 
             // SearchThesis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.ClientSize = new System.Drawing.Size(1030, 504);
+            this.ClientSize = new System.Drawing.Size(1228, 504);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.tb_Classification);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -328,6 +366,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.BindingSource researchBookBindingSource;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox tb_Classification;
         private System.Windows.Forms.DataGridViewTextBoxColumn thesisTitleIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn titleDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn publishedYearDataGridViewTextBoxColumn;
@@ -337,5 +377,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn classificationDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn abstractEcopyDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn approvalSheetEcopyDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NumberOfCopies;
     }
 }

@@ -51,6 +51,7 @@
             this.cb_Gender = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_AuthorSearchAdd = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,6 +66,10 @@
             this.label10 = new System.Windows.Forms.Label();
             this.tb_NumberOfCopies = new System.Windows.Forms.TextBox();
             this.dataGridView_Thesis = new System.Windows.Forms.DataGridView();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -143,7 +148,6 @@
             this.cb_Course.Size = new System.Drawing.Size(168, 29);
             this.cb_Course.TabIndex = 55;
             this.cb_Course.SelectedIndexChanged += new System.EventHandler(this.cb_Course_SelectedIndexChanged);
-          
             // 
             // bt_SaveCourse
             // 
@@ -219,6 +223,7 @@
             this.tb_AuthorContactNumber.Name = "tb_AuthorContactNumber";
             this.tb_AuthorContactNumber.Size = new System.Drawing.Size(221, 20);
             this.tb_AuthorContactNumber.TabIndex = 65;
+            this.tb_AuthorContactNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_AuthorContactNumber_KeyPress);
             // 
             // label3
             // 
@@ -318,6 +323,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btn_AuthorSearchAdd);
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Controls.Add(this.bt_AddAuthor);
             this.groupBox1.Controls.Add(this.bt_RemoveAuthor);
@@ -333,6 +339,23 @@
             this.groupBox1.TabIndex = 72;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Author Details";
+            // 
+            // btn_AuthorSearchAdd
+            // 
+            this.btn_AuthorSearchAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AuthorSearchAdd.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AuthorSearchAdd.ForeColor = System.Drawing.Color.White;
+            this.btn_AuthorSearchAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_AuthorSearchAdd.Location = new System.Drawing.Point(100, 329);
+            this.btn_AuthorSearchAdd.Name = "btn_AuthorSearchAdd";
+            this.btn_AuthorSearchAdd.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btn_AuthorSearchAdd.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btn_AuthorSearchAdd.Size = new System.Drawing.Size(198, 58);
+            this.btn_AuthorSearchAdd.TabIndex = 77;
+            this.btn_AuthorSearchAdd.Text = "Search Author";
+            this.btn_AuthorSearchAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_AuthorSearchAdd.UseVisualStyleBackColor = true;
+            this.btn_AuthorSearchAdd.Click += new System.EventHandler(this.btn_AuthorSearchAdd_Click);
             // 
             // dataGridView1
             // 
@@ -484,6 +507,7 @@
             this.tb_NumberOfCopies.Name = "tb_NumberOfCopies";
             this.tb_NumberOfCopies.Size = new System.Drawing.Size(221, 20);
             this.tb_NumberOfCopies.TabIndex = 62;
+            this.tb_NumberOfCopies.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_NumberOfCopies_KeyPress);
             // 
             // dataGridView_Thesis
             // 
@@ -495,17 +519,55 @@
             this.dataGridView_Thesis.Location = new System.Drawing.Point(21, 146);
             this.dataGridView_Thesis.Name = "dataGridView_Thesis";
             this.dataGridView_Thesis.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_Thesis.Size = new System.Drawing.Size(1, 33);
+            this.dataGridView_Thesis.Size = new System.Drawing.Size(189, 10);
             this.dataGridView_Thesis.TabIndex = 56;
             this.dataGridView_Thesis.Visible = false;
             this.dataGridView_Thesis.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView_Thesis_DataError);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(50, 652);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(80, 21);
+            this.label13.TabIndex = 74;
+            this.label13.Text = "Abstract";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(206, 652);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(0, 21);
+            this.label14.TabIndex = 75;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(206, 680);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(0, 21);
+            this.label15.TabIndex = 77;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(50, 680);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(133, 21);
+            this.label16.TabIndex = 76;
+            this.label16.Text = "Approval Sheet";
             // 
             // ThesisManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.ClientSize = new System.Drawing.Size(768, 710);
+            this.ClientSize = new System.Drawing.Size(956, 718);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label8);
@@ -565,12 +627,17 @@
         private System.Windows.Forms.Button bt_RemoveAuthor;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox cb_Classfication;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox tb_Cataloging;
         private System.Windows.Forms.DataGridView dataGridView_Thesis;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button btn_AuthorSearchAdd;
+        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }
